@@ -1,0 +1,124 @@
+header{
+    margin-top: 20px;
+}
+header a{
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+}
+header > .top{
+    width: 90vw;
+    display: flex;
+    justify-self: center;
+    height: 50px;
+    justify-content: space-between;
+}
+header .hamburger-icon{
+    height: 30px;
+    aspect-ratio: 1 / 1;
+    align-self: center;
+    cursor: pointer;
+}
+header h3{
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 400;
+    align-self: center;
+}
+header .top > div{
+    display: flex;
+}
+.top div .light-italic{
+    font-size: 1.2em;
+    font-style: italic;
+    padding: 0 20px;
+    opacity: 0.5;
+    color: #FFFFFF;
+}
+header .top > .lg{
+    align-content: center;
+}
+header .top .lg > a{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.25em;
+    margin-left: 50px;
+    padding: 10px;
+    transition: 0.25s;
+    width: 90px;
+    position: relative;
+    display: inline-block;
+}
+.lg a::before,
+.lg a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 2px solid #000;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+.lg a::before {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+  opacity: 0;
+}
+.lg a::after {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+  opacity: 0;
+}
+.lg a:hover::before {
+  width: 85%;
+  height: 65%;
+  opacity: 1;
+}
+.lg a:hover::after {
+  width: 85%;
+  height: 65%;
+  opacity: 1;
+}
+.sm a{
+    display: block;
+    height: 40px;
+    align-content: center;
+    justify-self: center;
+    margin: 5px 0;
+    width: 95vw;
+    transition: 0.25s;
+}
+.sm a:hover{
+    background-color: rgba(255, 255, 255, 0.25);
+}
+@media (max-width: 800px){
+    header h3{
+        font-size: 1.35em;
+    }
+    header .top > div{
+        display: block;
+    }
+    .top div .light-italic{
+        font-size: 1.0em;
+        font-style: italic;
+        padding: 0;
+        opacity: 0.5;
+    }
+    header > .top{
+        width: 80vw;
+        height: 75px;
+        align-items: center;
+    }
+    header .hamburger-icon{
+        height: 30px;
+        aspect-ratio: 1 / 1;
+        align-self: center;
+        cursor: pointer;
+    }
+    .sm a{
+        width: 90vw;
+    }
+}

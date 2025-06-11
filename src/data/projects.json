@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Rebie's Bakery",
+        "id": 1,
+        "img": "/src/images/rebies-logo.png",
+        "shortDescription": "Website for a small bakery business that allows the owner to showcase her creations and reach new customers.",
+        "longDescription": "This project is a vanilla based website for a small bakery business. It provides the owner a place to showcase all the different types of baked goods she creates, along with menu items with pricing. This is an outlet for her to reach new customers and is regularly maintained.",
+        "link": "link"
+    },
+    {
+        "name": "NBA Stats",
+        "id": 2,
+        "img": "/src/images/nbastats-logo.png",
+        "shortDescription": "React project for checking basketball stats. Includes individual pages for players and teams, along with detailed comparisons for each.",
+        "longDescription": "This React project is a place to check NBA basketball stats for players and teams. The app includes a search option for all players and teams, along with comparison pages for each. I plan to continually update this app to later include game stats, live scores, and more detailed statistics.",
+        "link": "link"
+    },
+    {
+        "name": "Fuller Photography",
+        "id": 3,
+        "img": "/src/images/rebies-logo.png",
+        "shortDescription": "short desc here",
+        "longDescription": "long desc here",
+        "link": "link"
+    }
+]

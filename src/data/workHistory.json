@@ -1,0 +1,54 @@
+[
+    {
+        "year": "2021",
+        "imgs": ["/src/images/rebies-logo.png"],
+        "data": 
+        [
+            "sentence about current school status (engineering to cs)",
+            "sentence about tutoring for intro JS classes",
+            "sentence about classes taken in winter/fall",
+            "sentence about working for southoak"
+        ]
+    },
+    {
+        "year": "2022",
+        "imgs": ["/src/images/rebies-logo.png"],
+        "data": 
+        [
+            "sentence about stellantis internship",
+            "sentence about recieveing full till stellantis offer",
+            "sentence about Augusto Digital senior project",
+            "sentence about Graduation"
+        ]
+    },
+    {
+        "year": "2023",
+        "imgs": ["/src/images/rebies-logo.png"],
+        "data": 
+        [
+            "sentence about stellantis work",
+            "sentence about stellantis work",
+            "sentence about stellantis work"
+        ]
+    },
+    {
+        "year": "2024",
+        "imgs": ["/src/images/rebies-logo.png"],
+        "data": 
+        [
+            "sentence about stellantis work",
+            "sentence about stellantis work",
+            "sentence about leaving stellantis and starting Coursera"
+        ]
+    },
+    {
+        "year": "2025",
+        "imgs": ["/src/images/nbastats-logo.png"],
+        "data": 
+        [
+            "sentence about new education and goals",
+            "sentence about classes completed so far",
+            "sentence about projects completed so far"
+        ]
+    }
+]

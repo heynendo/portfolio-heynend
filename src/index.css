@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  background-image: url('./images/background-1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: "Roboto", sans-serif;
+}
+.break{
+  width: 95vw;
+  height: 5px;
+  justify-self: center;
+  background: #FFFFFF;
+  opacity: 0.25;
+}
+@media (max-width: 800px){
+  .break{
+    width: 90vw;
+  }
+}

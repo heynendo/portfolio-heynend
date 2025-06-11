@@ -1,0 +1,240 @@
+.home{
+    justify-self: center;
+    margin-top: 100px;
+}
+.home button{
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #000000;
+    border-radius: 50px;
+    width: 22.5vw;
+    max-width: 400px;
+    height: 60px;
+    justify-self: center;
+    align-self: center;
+    font-weight: 400;
+    font-size: 1.1em;
+    color: #000000;
+    cursor: pointer;
+    z-index: 1;
+    transition: 0.2s;
+}
+.home button:hover{
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+.home .main-card{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(6, 100px);
+    width: 70vw;
+    max-width: 900px;
+    justify-self: center;
+}
+.main-card button > img{
+    height: 15px;
+    aspect-ratio: 1 / 1;
+    margin: 0 5px;
+}
+.home .main-card > .background{
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    opacity: 0.25;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+}
+.main-card > .headshot{
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+
+    grid-row: 2 / 5;
+    grid-column: 1 / 2;
+    width: 75%;
+    justify-self: center;
+    align-self: center;
+    z-index: 1;
+    box-shadow: 0px 0px 25px 15px rgba(0, 0, 0, 0.1);
+}
+.main-card > .name{
+    grid-row: 2 / 3;
+    grid-column: 2 / -1;
+
+    text-align: center;
+    align-self: center;
+    z-index: 1;
+}
+.main-card > .resume{
+    grid-row: 3 / 4;
+    grid-column: 2 / -1;
+}
+.main-card > .linkedin{
+    grid-row: 4 / 5;
+    grid-column: 2 / -1;
+}
+.main-card > .more{
+    grid-row: 6 / 7;
+    grid-column: 1 / -1;
+}
+.home > .projects{
+    margin-top: 100px;
+}
+.projects > h3{
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 400;
+    align-content: center;
+    margin-left: 2.5vw;
+    height: 50px;
+}
+.projects > .cards{
+    margin: 50px 0;
+    display: flex;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.2);
+}
+.cards > .project-card{
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 50px 250px;
+    width: 40vw;
+    color: #000000;
+    text-decoration: none;
+}
+.project-card > h3{
+    z-index: 1;
+    justify-self: center;
+    align-self: center;
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 400;
+
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+}
+.project-card > img{
+    z-index: 1;
+    width: 90%;
+    align-self: center;
+    justify-self: center;
+    border-radius: 5px;
+
+    grid-column: 1 / 2;
+    grid-row: 2 / -1;
+}
+.project-card > p{
+    z-index: 1;
+    padding-left: 10px;
+    align-self: center;
+
+    grid-column: 2 / -1;
+    grid-row: 2 / -1;
+}
+.project-card > .background{
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    transition: 0.2s;
+}
+.project-card:hover > .background{
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 100%);
+}
+.cards > .project-link{
+    flex: 1;
+    height: 100%;
+    color: #000000;
+    text-decoration: none;
+    align-content: center;
+    justify-items: center;
+}
+.cards .project-link > h3{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.25em;
+}
+.cards > .project-link:hover{
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 100%);
+}
+@media (max-width: 800px){
+    .home{
+        margin-top: 50px;
+    }
+    .home button{
+        border-radius: 50px;
+        width: 35vw;
+        max-width: 400px;
+        height: 35px;
+        font-size: 0.9em;
+    }
+    .home button:hover{
+        font-size: 0.95em;
+        letter-spacing: 1px;
+    }
+    .home .main-card{
+        display: grid;
+        grid-template-columns: 55% 45%;
+        grid-template-rows: 100px 75px 75px 75px 100px;
+        width: 90vw;
+    }
+    .main-card button > img{
+        height: 10px;
+    }
+    .main-card > .headshot{
+        width: 80%;
+    }
+    .main-card > .name{
+        grid-row: 1 / 2;
+        grid-column: 1 / -1;
+    }
+    .main-card > .resume{
+        grid-row: 2 / 4;
+        grid-column: 2 / -1;
+    }
+    .main-card > .linkedin{
+        grid-row: 3 / 5;
+    }
+    .main-card > .more{
+        grid-row: 5 / 6;
+    }
+    .home > .projects{
+        margin-top: 50px;
+    }
+    .projects > h3{
+        margin-left: 5vw;
+    }
+    .projects > .break{
+        width: 90vw;
+    }
+    .projects > .cards{
+        display: block;
+        height: 800px;
+        /* need to update background still*/
+        background: none;
+    }
+    .cards > .project-card{
+        grid-template-columns: 45% 55%;
+        grid-template-rows: 40px 180px;
+        width: 90vw;
+        margin: 20px 0;
+        background: rgba(255, 255, 255, 0.2);
+    }
+    .cards > .project-link{
+        display: block;
+        height: 100%;
+        color: #000000;
+        text-decoration: none;
+        align-content: center;
+        justify-items: center;
+        background: rgba(255, 255, 255, 0.2);
+        height: 50px;
+    }
+    .cards .project-link > h3{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.25em;
+        margin: 0;
+    }
+    .cards > .project-link:hover{
+        background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 25%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(255, 255, 255, 0) 100%);
+    }
+}
