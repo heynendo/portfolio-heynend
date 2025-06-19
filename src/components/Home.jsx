@@ -1,6 +1,4 @@
 import { Link } from 'react-router-dom'
-import headshot from '../../public/images/headshot.jpg'
-import newlinkIcon from '../../public/images/newlink-icon.png'
 import projects from '../data/projects.json'
 import '../styles/home.css'
 
@@ -22,15 +20,15 @@ export default function Home(){
         <div className="home">
             <div className="main-card">
                 <div className='background'></div>
-                <img className='headshot' src={headshot}/>
+                <img className='headshot' src="/images/headshot.jpg" />
                 <h1 className='name'>Donovan Heynen</h1>
                 <button className='button resume'>
                     resume
-                    <img src={newlinkIcon} />
+                    <img src="/images/newlink-icon.png" />
                 </button>
                 <button className='button linkedin'>
                     linkedIn
-                    <img src={newlinkIcon} />
+                    <img src="/images/newlink-icon.png" />
                 </button>
                 <Link 
                     to='about' 

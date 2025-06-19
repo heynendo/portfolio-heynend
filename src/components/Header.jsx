@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/header.css'
-import hamburgerIcon from '../../public/images/hamburger-icon.png'
 
 export default function Header() {
 
@@ -36,7 +35,7 @@ export default function Header() {
                     <Link to='contact'>Contact</Link>
                 </nav> : 
                 <img 
-                    src={hamburgerIcon}
+                    src="/images/hamburger-icon.png"
                     className='hamburger-icon'
                     onClick={handleDropdown}
                 />

@@ -1,11 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import { useLocation } from 'react-router-dom'
-import headshot from '../../public/images/headshot.jpg'
 import workHistory from '../data/workHistory.json'
 import projects from '../data/projects.json'
 import '../styles/about.css'
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
-import newlinkIcon from '../../public/images/newlink-icon.png'
 
 export default function About(){
 
@@ -66,7 +64,7 @@ export default function About(){
             <div className="card about-card">
                 <h3>About Me</h3>
                 <div>
-                    <img src={headshot}/>
+                    <img src="/images/headshot.jpg"/>
                     <div className='about-p'>
                         <p>I'm a front-end web developer with a passion for crafting clean, responsive, and user-friendly interfaces. I currently specialize in building dynamic pages with HTML, CSS, JavaScript, and React. With a strong eye for detail, I focus on writing efficient code and building responsive websites that look and feel great. I'm constantly exploring new technologies and best practices to stay current and keep improving as a developer.</p>
 
@@ -134,7 +132,7 @@ export default function About(){
                             onClick={() => window.open(`${project.link}`, '_blank')} 
                         >
                             visit site 
-                            <img src={newlinkIcon} />
+                            <img src="/images/newlink-icon.png" />
                         </button>
                     </div>
                     <div className='project-selector'>
