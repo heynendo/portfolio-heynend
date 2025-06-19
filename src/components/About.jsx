@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import { useLocation } from 'react-router-dom'
 import headshot from '../images/headshot.jpg'
 import workHistory from '../data/workHistory.json'
 import projects from '../data/projects.json'
@@ -8,6 +9,10 @@ import newlinkIcon from '../images/newlink-icon.png'
 
 export default function About(){
 
+    const { hash } = useLocation()
+
+    const [projectFade, setProjectFade] = useState(false)
+    const [yearFade, setYearFade] = useState(false)
     const [year, setYear] = useState('2025')
     const [yearData, setYearData] = useState(() => 
         workHistory.find(x => x.year === year))
@@ -16,7 +21,25 @@ export default function About(){
 
     useEffect(() => {
         setYearData(() => workHistory.find(x => x.year === year))
+
+        setYearFade(true)
+        setTimeout(() => {
+            setYearFade(false)
+        }, 50)
     },[year])
+
+    useEffect(() => { //FIXME: update to include setting the correct project
+        if (hash) {
+            const hashSplit = hash.split('-')
+            const element = document.querySelector(hashSplit[0])
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+            if (hashSplit.length > 1){
+                setProject(projects.find(x => x.id === Number(hashSplit[1])))
+            }
+        }
+    }, [hash])
 
     function changeProject(x){
 
@@ -29,6 +52,11 @@ export default function About(){
         }else{
             setProject(projects.find(x => x.id === nextProj))
         }
+
+        setProjectFade(true)
+        setTimeout(() => {
+            setProjectFade(false)
+        }, 50)
     }
 
     
@@ -38,18 +66,19 @@ export default function About(){
             <div className="card about-card">
                 <h3>About Me</h3>
                 <div>
-                    <div className='about-p'>
-                        <p>I'm a passionate and detail-oriented developer with a strong interest in building clean, user-friendly digital experiences. My journey into web development began with curiosity and evolved into a career fueled by creativity and problem-solving. Whether it's designing responsive layouts, working with modern JavaScript frameworks, or optimizing user interactions, I enjoy every part of the process that brings an idea to life on the web.</p>
-                        <p>Over the years, I've had the opportunity to work on a range of projects—from personal portfolio sites to full-featured data-driven apps. I'm especially drawn to combining design and functionality, ensuring each project not only works well but looks great too. When I'm not coding, I enjoy learning new technologies, collaborating with other creatives, and exploring how tech can solve real-world problems.</p>
-                    </div>
                     <img src={headshot}/>
+                    <div className='about-p'>
+                        <p>I'm a front-end web developer with a passion for crafting clean, responsive, and user-friendly interfaces. I currently specialize in building dynamic pages with HTML, CSS, JavaScript, and React. With a strong eye for detail, I focus on writing efficient code and building responsive websites that look and feel great. I'm constantly exploring new technologies and best practices to stay current and keep improving as a developer.</p>
+
+                        <p>With a background in automotive engineering, I'm now transitioning into a career in web development, bringing with me a strong foundation in problem-solving and technical thinking. I've complemented my college and engineering experience with a formal education in front-end development, focusing on React, and I'm eager to apply these skills in a role that challenges and grows my capabilities. Currently I'm expanding into back-end technologies as I work toward becoming a full-stack developer.</p>
+                    </div>
                 </div>
             </div>
             <h1>Past to Present</h1>
             <div className="card history-card">
                 <h3>Work & Education</h3>
                 <div>
-                    <div className='content'>
+                    <div className={`content ${yearFade ? 'fade' : ''}`}>
                         <img src={yearData.imgs[0]}/>
                         <ul>
                             {yearData?.data?.map((point, index) => (
@@ -95,14 +124,14 @@ export default function About(){
                     </div>
                 </div>
             </div>
-            <div className="card projects-card">
+            <div className="card projects-card" id='projects'>
                 <h3>Projects</h3>
                 <div>
-                    <div className='content'>
+                    <div className={`content ${projectFade ? 'fade' : ''}`}>
                         <img src={project.img}/>
                         <p>{project.longDescription}</p>
                         <button
-                            onClick={() => window.open(`${projects.link}`, '_blank')} 
+                            onClick={() => window.open(`${project.link}`, '_blank')} 
                         >
                             visit site 
                             <img src={newlinkIcon} />
@@ -111,14 +140,14 @@ export default function About(){
                     <div className='project-selector'>
                         <FaAngleLeft 
                             className='arrow'
-                            onClick={() => changeProject(1)}
+                            onClick={() => changeProject(-1)}
                         />
-                        <div className='vert-break'></div>
-                        <h1>{project.name}</h1>
-                        <div className='vert-break'></div>
+                        <h1 className={`project-name ${projectFade ? 'fade' : ''}`}>
+                            {project.name}
+                        </h1>
                         <FaAngleRight 
                             className='arrow'
-                            onClick={() => changeProject(-1)}
+                            onClick={() => changeProject(1)}
                         />
                     </div>
                 </div>

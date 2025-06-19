@@ -7,6 +7,7 @@
     font-size: 3em;
     align-items: center;
     text-align: center;
+    cursor: default;
 }
 .about > .card{
     width: 70vw;
@@ -16,32 +17,35 @@
     display: grid;
     grid-template-rows: 50px, 1fr;
     grid-template-columns: 100%;
-    margin: 50px 0;
+    margin: 50px auto;
 }
 .about .card > h3{
     padding-left: 2.5vw;
     font-weight: 400;
     font-size: 1.5em;
+    cursor: default;
 }
 .about-card > div{
     display: grid;
     grid-template-columns: 60% 40%;
     width: 100%;
+    min-height: 400px;
 }
 .about-card img{
     border-radius: 100%;
     grid-column: 2 / -1;
+    grid-row: 1;
     width: 75%;
+    max-height: 375px;
     aspect-ratio: 1 / 1;
     justify-self: center;
     align-self: center;
-    margin-bottom: 50px;
 }
-.abotu-card .about-p{
-    align-content: center;
+.about-card .about-p{
+    align-self: center;
 }
 .about-card p{
-    padding: 0 15px;
+    padding: 5px 25px;
 }
 .year-selector{
     justify-self: center;
@@ -57,6 +61,7 @@
     opacity: 0.25;
     align-self: center;
     margin: 0 10px;
+    transition: 1s;
 }
 .year-selector span > .lg{
     font-weight: 700;
@@ -69,16 +74,25 @@
     cursor: pointer;
     margin: 0;
 }
+.year-selector span > .lg:hover{
+    opacity: 0.6;
+}
 .year-selector span > .selected{
+    opacity: 1;
+    cursor: default;
+}
+.year-selector span > .selected:hover{
     opacity: 1;
 }
 .history-card .content{
     display: grid;
     grid-template-columns: 50% 50%;
-    height: 300px;
+    min-height: 400px;
 }
 .history-card .content > ul{
     align-self: center;
+    opacity: 1;
+    transition: opacity 1s;
 }
 .history-card .content li{
     margin: 20px;
@@ -86,13 +100,30 @@
 }
 .history-card .content > img{
     width: 80%;
+    max-height: 90%;
     justify-self: center;
     align-self: center;
     border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 1;
+    transition: opacity 1s;
+}
+.history-card .content.fade > img{
+    opacity: 0; 
+    transition: 0s;
+}
+.history-card .content.fade > ul{
+    opacity: 0; 
+    transition: 0s;
+}
+.about > .projects-card{
+    margin-bottom: 150px;
 }
 .projects-card .project-selector{
     display: flex;
     justify-self: center;
+    justify-content: center;
     margin: 10px;
 }
 .project-selector > h1{
@@ -104,48 +135,72 @@
     transition: 0.5s;
     margin: 0;
     text-transform: uppercase;
-    min-width: 30vw;
-}
-.project-selector > .vert-break{
-    height: 50px;
-    margin: 0 20px;
+    min-width: 50vw;
+    cursor: default;
 }
 .project-selector > .arrow{
     color: white;
-    transform: scale(3.5);
+    transform: scale(4.5);
     align-self: center;
     justify-self: center;
     cursor: pointer;
     transition: 0.2s;
     opacity: 0.25;
+    margin: 0 20px;
 }
 .project-selector > .arrow:hover{
-    transform: scale(3.75);
+    transform: scale(5);
     opacity: 1;
+}
+.project-selector > .project-name{
+    opacity: 1;
+    transition: opacity 0.75s  ease 0.25s;
+}
+.project-selector > .project-name.fade{
+    opacity: 0; 
+    transition: 0s;
 }
 .projects-card .content{
     min-height: 400px;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 1fr 50px 50px;
+    grid-template-rows: 1fr 150px;
     align-items: center;
 }
 .projects-card .content > img{
     grid-column: 1 / 2;
     grid-row: 1 / 3;
     width: 80%;
+    max-height: 90%;
     justify-self: center;
+    border-radius: 10px;
+    opacity: 1;
+    transition: opacity 1s;
+    margin-left: auto;
+    margin-right: auto;
 }
 .projects-card .content > p{
     grid-column: 2 / -1;
     grid-row: 1 / 2;
     padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 1;
+    transition: opacity 1s;
+}
+.projects-card .content.fade > img{
+    opacity: 0; 
+    transition: 0s;
+}
+.projects-card .content.fade > p{
+    opacity: 0; 
+    transition: 0s;
 }
 .projects-card .content > button{
     grid-column: 2 / -1;
     grid-row: 2 / -2;
     background: rgba(255, 255, 255, 0.2);
-    border: 2px solid #000000;
+    border: 1px solid #000000;
     border-radius: 50px;
     width: 80%;
     justify-self: center;
@@ -166,12 +221,102 @@
 .projects-card .content > button:hover{
     font-size: 1.2em;
     letter-spacing: 1px;
+    background: rgba(255, 255, 255, 0.5);
 }
 @media (max-width: 1000px){
-
+    .year-selector span > .lg{
+        font-size: 4em;
+    }
+    .about-card > div{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        width: 100%;
+    }
+    .about-card p{
+        font-size: 0.8em;
+    }
+    .history-card .content{
+        display: block;
+        min-height: 400px;
+    }
+    .history-card .content li{
+        font-size: 0.8em;
+    }
+    .history-card .content > img{
+        display: flex;
+        width: 50vw;
+    }
+    .projects-card .content{
+        display: block;
+        justify-items: center;
+        min-height: 400px;
+    }
+    .projects-card .content > img{
+        display: flex;
+        width: 50vw;
+    }
+    .projects-card .content > p{
+        width: 90%;
+        justify-self: center;
+    }
+    .projects-card .content > button{
+        display: block;
+        width: 50vw;
+        margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 0.95em;
+        height: 35px;
+        color: black;
+        text-decoration: none;
+    }
+    .projects-card .content button > img{
+        height: 10px;
+    }
+    .projects-card .content > button:hover{
+        font-size: 1em;
+    }
 }
 @media (max-width: 800px){
     .about > .card{
         width: 90vw;
+    }
+}
+@media (max-width: 650px){
+    .year-selector span > .lg{
+        font-size: 3em;
+    }
+    .about .vert-break{
+        height: 40px;
+        width: 3px;
+        transition: 1s;
+    }
+    .about-card > div{
+        display: block;
+    }
+    .about-card img{
+        display: flex;
+        width: 50%;
+        margin: 10px auto;
+    }
+    .year-selector{
+        margin-top: 10px;
+    }
+    .project-selector > h1{
+        font-size: 2em;
+    }
+    .project-selector > .arrow{
+        transform: scale(3.5);
+    }
+    .project-selector > .arrow:hover{
+        transform: scale(4);
+    }
+    .about > h1{
+        font-size: 2em;
+    }
+}
+@media (max-width: 500px){
+    .year-selector span > .lg{
+        font-size: 2em;
     }
 }

@@ -6,12 +6,18 @@ header a{
     text-decoration: none;
     text-align: center;
 }
+header > .break{
+    margin-left: auto;
+    margin-right: auto;
+}
 header > .top{
     width: 90vw;
     display: flex;
     justify-self: center;
     height: 50px;
     justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
 }
 header .hamburger-icon{
     height: 30px;
@@ -25,10 +31,10 @@ header h3{
     font-weight: 400;
     align-self: center;
 }
-header .top > div{
+header .top > a{
     display: flex;
 }
-.top div .light-italic{
+.top a .light-italic{
     font-size: 1.2em;
     font-style: italic;
     padding: 0 20px;
@@ -82,7 +88,30 @@ header .top .lg > a{
   height: 65%;
   opacity: 1;
 }
+header .closed > a{
+    margin: 0 auto;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    transition: height 0.75s, opacity 0.25s width 1s ease 2s;
+    cursor: default;
+}
+header .closed a > h3{
+    font-size: 0;
+    transition: 1s;
+}
+header .closed .break{
+    opacity: 0;
+    height: 0;
+    transition: 0.1s;
+}
+.sm > .break{
+    margin-left: auto;
+    margin-right: auto;
+}
 .sm a{
+    margin-left: auto;
+    margin-right: auto;
     display: block;
     height: 40px;
     align-content: center;
@@ -98,10 +127,10 @@ header .top .lg > a{
     header h3{
         font-size: 1.35em;
     }
-    header .top > div{
+    header .top > a{
         display: block;
     }
-    .top div .light-italic{
+    .top a .light-italic{
         font-size: 1.0em;
         font-style: italic;
         padding: 0;
@@ -119,6 +148,8 @@ header .top .lg > a{
         cursor: pointer;
     }
     .sm a{
+        margin-left: auto;
+        margin-right: auto;
         width: 90vw;
     }
 }

@@ -18,16 +18,18 @@ export default function Header() {
     },[])
 
     function handleDropdown(){
-        setToggleDropdown(prevToggle => !prevToggle)
+        if (window.innerWidth < 1000){
+            setToggleDropdown(prevToggle => !prevToggle)
+        }
     }
 
     return(
         <header>
             <div className='top'>
-                <div>
+                <Link to='/'>
                     <h3>Donovan Heynen</h3>
                     <h3 className='light-italic'>Frontend Web Developer</h3>
-                </div>
+                </Link>
                 {pageWidth > 1000 ? <nav className='lg'>
                     <Link to='/'>Home</Link>
                     <Link to='about'>About</Link>
@@ -41,8 +43,7 @@ export default function Header() {
                 }
             </div>
             <div className='break'></div>
-            {toggleDropdown ? 
-            <nav className='sm'>
+            <nav className={`sm ${toggleDropdown ? 'open' : 'closed'}`}>
                 <Link 
                     to='/'
                     onClick={handleDropdown}
@@ -64,7 +65,7 @@ export default function Header() {
                     <h3>Contact</h3>
                 </Link>
                 <div className='break'></div>
-            </nav> : ''}
+            </nav>
         </header>
     )
 }

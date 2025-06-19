@@ -12,6 +12,8 @@ html, body {
   font-family: "Roboto", sans-serif;
 }
 .break{
+  margin-left: auto;
+  margin-right: auto;
   width: 95vw;
   height: 5px;
   justify-self: center;

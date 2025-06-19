@@ -1,54 +1,55 @@
 [
     {
         "year": "2021",
-        "imgs": ["/src/images/rebies-logo.png"],
+        "imgs": ["/src/images/gvsu-logo.png"],
         "data": 
         [
-            "sentence about current school status (engineering to cs)",
-            "sentence about tutoring for intro JS classes",
-            "sentence about classes taken in winter/fall",
-            "sentence about working for southoak"
+            "Completed a minor in computer engineering and transitioned to major in computer science.",
+            "Tutored introductory Javascript courses at GVSU.",
+            "Worked seasonally as a porter for the car dealership Southoak during summer/winter breaks."
         ]
     },
     {
         "year": "2022",
-        "imgs": ["/src/images/rebies-logo.png"],
+        "imgs": ["/src/images/augusto-logo.png"],
         "data": 
         [
-            "sentence about stellantis internship",
-            "sentence about recieveing full till stellantis offer",
-            "sentence about Augusto Digital senior project",
-            "sentence about Graduation"
+            "Interned through the summer with Stellantis as a software experienced intern. Worked for 12 weeks as a computer engineer creating models of electrical and digital systems.",
+            "Ended my internship with recieving a full time offer to rejoin my team in January 2023.",
+            "Completed React based senior project for Augusto Digital. First major experience using React.",
+            "Graduated from GVSU in December with a major in computer science, and minors in computer engineering and math."
         ]
     },
     {
         "year": "2023",
-        "imgs": ["/src/images/rebies-logo.png"],
+        "imgs": ["/src/images/stellantis-logo1.png"],
         "data": 
         [
-            "sentence about stellantis work",
-            "sentence about stellantis work",
-            "sentence about stellantis work"
+            "Worked for Stellantis primarily as a Plant Model Engineer for ___ project.",
+            "Completed certificates through __ for Agile workflow etc",
+            "Continued learning more about __ engineering and the specifics of our project to grow into new roles."
         ]
     },
     {
         "year": "2024",
-        "imgs": ["/src/images/rebies-logo.png"],
+        "imgs": ["/src/images/stellantis-logo2.png"],
         "data": 
         [
-            "sentence about stellantis work",
-            "sentence about stellantis work",
-            "sentence about leaving stellantis and starting Coursera"
+            "sentence about swat work at stellantis",
+            "sentence about HIL/SIL system pipeline monitoring while still working with Plant Model team",
+            "Decided to leave Stellantis at the end of the year to persue a new career in web development. Although I enjoyed my time and the people I worked with, I learned this was not the career I wanted for my long term future.",
+            "Began classes through Coursera in November to obtain a formal education in front-end web development."
         ]
     },
     {
         "year": "2025",
-        "imgs": ["/src/images/nbastats-logo.png"],
+        "imgs": ["/src/images/coursera-logo.png"],
         "data": 
         [
-            "sentence about new education and goals",
-            "sentence about classes completed so far",
-            "sentence about projects completed so far"
+            "Completed Meta's Front-End Developer Professional Certificate and Scrimba's Become a Professional React Developer Specialization certified courses through Coursera",
+            "Completed native HTML/CSS/JS projects Fuller Photography and Rebie's Bakery.",
+            "Completed React based project NBA Stats.",
+            "Continuing education by starting ___ and ___ courses."
         ]
     }
 ]
