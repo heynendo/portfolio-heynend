@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/header.css'
-import hamburgerIcon from '../images/hamburger-icon.png'
+import hamburgerIcon from '../../public/images/hamburger-icon.png'
 
 export default function Header() {
 

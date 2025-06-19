@@ -1,10 +1,8 @@
 import { Link } from 'react-router-dom'
-import headshot from '../images/headshot.jpg'
-import '../styles/home.css'
-import downloadIcon from '../images/download-icon.png'
-import newlinkIcon from '../images/newlink-icon.png'
+import headshot from '../../public/images/headshot.jpg'
+import newlinkIcon from '../../public/images/newlink-icon.png'
 import projects from '../data/projects.json'
-import rebiesLogo from '../images/rebies-logo.png'
+import '../styles/home.css'
 
 export default function Home(){
 

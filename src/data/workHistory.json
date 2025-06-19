@@ -1,7 +1,7 @@
 [
     {
         "year": "2021",
-        "imgs": ["/src/images/gvsu-logo.png"],
+        "imgs": ["/images/gvsu-logo.png"],
         "data": 
         [
             "Completed a minor in computer engineering and transitioned to major in computer science.",
@@ -11,7 +11,7 @@
     },
     {
         "year": "2022",
-        "imgs": ["/src/images/augusto-logo.png"],
+        "imgs": ["/images/augusto-logo.png"],
         "data": 
         [
             "Interned through the summer with Stellantis as a software experienced intern. Worked for 12 weeks as a computer engineer creating models of electrical and digital systems.",
@@ -22,7 +22,7 @@
     },
     {
         "year": "2023",
-        "imgs": ["/src/images/stellantis-logo1.png"],
+        "imgs": ["/images/stellantis-logo1.png"],
         "data": 
         [
             "Worked for Stellantis primarily as a Plant Model Engineer for ___ project.",
@@ -32,7 +32,7 @@
     },
     {
         "year": "2024",
-        "imgs": ["/src/images/stellantis-logo2.png"],
+        "imgs": ["/images/stellantis-logo2.png"],
         "data": 
         [
             "sentence about swat work at stellantis",
@@ -43,7 +43,7 @@
     },
     {
         "year": "2025",
-        "imgs": ["/src/images/coursera-logo.png"],
+        "imgs": ["/images/coursera-logo.png"],
         "data": 
         [
             "Completed Meta's Front-End Developer Professional Certificate and Scrimba's Become a Professional React Developer Specialization certified courses through Coursera",

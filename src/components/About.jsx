@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import { useLocation } from 'react-router-dom'
-import headshot from '../images/headshot.jpg'
+import headshot from '../../public/images/headshot.jpg'
 import workHistory from '../data/workHistory.json'
 import projects from '../data/projects.json'
 import '../styles/about.css'
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
-import newlinkIcon from '../images/newlink-icon.png'
+import newlinkIcon from '../../public/images/newlink-icon.png'
 
 export default function About(){
 
