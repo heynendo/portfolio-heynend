@@ -86,7 +86,7 @@
 }
 .history-card .content{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 40% 60%;
     min-height: 400px;
 }
 .history-card .content > ul{
@@ -96,7 +96,7 @@
 }
 .history-card .content li{
     margin: 20px;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 .history-card .content > img{
     width: 80%;
@@ -210,8 +210,14 @@
     align-items: center;
     text-align: center;
     cursor: pointer;
-    transition: 0.2s;
     height: 50px;
+    opacity: 1;
+    transition: opacity 1s;
+    transition: 0.2s;
+}
+.projects-card .content.fade > button{
+    opacity: 0; 
+    transition: 0s;
 }
 .projects-card .content button > img{
     align-self: center;

@@ -4,9 +4,9 @@
         "imgs": ["/images/gvsu-logo.png"],
         "data": 
         [
-            "Completed a minor in computer engineering and transitioned to major in computer science.",
-            "Tutored introductory Javascript courses at GVSU.",
-            "Worked seasonally as a porter for the car dealership Southoak during summer/winter breaks."
+            "Switched my major from Computer Engineering to Computer Science, while continuing to pursue a minor in Computer Engineering.",
+            "Tutored an introductory JavaScript programming course at Grand Valley State University, helping students build foundational coding skills.",
+            "Worked seasonally between college semesters as a car dealership porter, cleaning cars, valeting customers, and assisting with vehicle management."
         ]
     },
     {
@@ -14,10 +14,10 @@
         "imgs": ["/images/augusto-logo.png"],
         "data": 
         [
-            "Interned through the summer with Stellantis as a software experienced intern. Worked for 12 weeks as a computer engineer creating models of electrical and digital systems.",
-            "Ended my internship with recieving a full time offer to rejoin my team in January 2023.",
-            "Completed React based senior project for Augusto Digital. First major experience using React.",
-            "Graduated from GVSU in December with a major in computer science, and minors in computer engineering and math."
+            "Completed a 12-week summer internship with Stellantis as a Software Experience Intern, working on the development of electrical and digital system models for automotive applications.",
+            "Received a full-time offer to return to the same team at Stellantis following the internship, starting in January 2023.",
+            "Collaborated with a team on a senior capstone project sponsored by Augusto Digital, developing a React-based web application — my first major development experience using React.",
+            "Graduated from Grand Valley State University in December with a major in Computer Science and minors in Computer Engineering and Mathematics."
         ]
     },
     {
@@ -37,8 +37,8 @@
         [
             "sentence about swat work at stellantis",
             "sentence about HIL/SIL system pipeline monitoring while still working with Plant Model team",
-            "Decided to leave Stellantis at the end of the year to persue a new career in web development. Although I enjoyed my time and the people I worked with, I learned this was not the career I wanted for my long term future.",
-            "Began classes through Coursera in November to obtain a formal education in front-end web development."
+            "Chose to leave my full-time role at Stellantis at the end of the year to pursue a new career in web development. While I value the experience, I realized my long-term interests were better aligned with software and front-end development.",
+            "Began classes in front-end web development through Coursera in November, focusing on building practical skills in modern web technologies."
         ]
     },
     {
@@ -46,10 +46,10 @@
         "imgs": ["/images/coursera-logo.png"],
         "data": 
         [
-            "Completed Meta's Front-End Developer Professional Certificate and Scrimba's Become a Professional React Developer Specialization certified courses through Coursera",
-            "Completed native HTML/CSS/JS projects Fuller Photography and Rebie's Bakery.",
-            "Completed React based project NBA Stats.",
-            "Continuing education by starting ___ and ___ courses."
+            "Earned Meta's Front-End Developer Professional Certificate and Scrimba's Professional React Developer Specialization through Coursera.",
+            "Built and deployed native HTML, CSS, and JavaScript projects, including Fuller Photography and Rebie's Bakery, to strengthen foundational web development skills.",
+            "Developed NBA Stats, a React-based application for exploring player and team statistics — further deepening my experience with modern front-end frameworks.",
+            "Continuing my education by beginning [insert course name] in backend development, while actively building new projects that reinforce and apply the skills being learned."
         ]
     }
 ]

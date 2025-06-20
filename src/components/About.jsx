@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { useLocation } from 'react-router-dom'
 import workHistory from '../data/workHistory.json'
-import projects from '../data/projects.json'
+import projectsAndCerts from '../data/projectsAndCerts.json'
 import '../styles/about.css'
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 
@@ -15,7 +15,7 @@ export default function About(){
     const [yearData, setYearData] = useState(() => 
         workHistory.find(x => x.year === year))
     const [project, setProject] = useState(() => 
-        projects.find(x => x.id === 1))
+        projectsAndCerts.find(x => x.id === 1))
 
     useEffect(() => {
         setYearData(() => workHistory.find(x => x.year === year))
@@ -34,7 +34,7 @@ export default function About(){
                 element.scrollIntoView({ behavior: 'smooth' });
             }
             if (hashSplit.length > 1){
-                setProject(projects.find(x => x.id === Number(hashSplit[1])))
+                setProject(projectsAndCerts.find(x => x.id === Number(hashSplit[1])))
             }
         }
     }, [hash])
@@ -44,11 +44,11 @@ export default function About(){
         const nextProj = project.id + x
 
         if (nextProj < 1){
-            setProject(projects.find(x => x.id === projects.length))
-        }else if (nextProj > projects.length){
-            setProject(projects.find(x => x.id === 1))
+            setProject(projectsAndCerts.find(x => x.id === projectsAndCerts.length))
+        }else if (nextProj > projectsAndCerts.length){
+            setProject(projectsAndCerts.find(x => x.id === 1))
         }else{
-            setProject(projects.find(x => x.id === nextProj))
+            setProject(projectsAndCerts.find(x => x.id === nextProj))
         }
 
         setProjectFade(true)
@@ -123,7 +123,7 @@ export default function About(){
                 </div>
             </div>
             <div className="card projects-card" id='projects'>
-                <h3>Projects</h3>
+                <h3>Projects & Certificates</h3>
                 <div>
                     <div className={`content ${projectFade ? 'fade' : ''}`}>
                         <img src={project.img}/>
@@ -131,7 +131,7 @@ export default function About(){
                         <button
                             onClick={() => window.open(`${project.link}`, '_blank')} 
                         >
-                            visit site 
+                            {project.linkText} 
                             <img src="/images/newlink-icon.png" />
                         </button>
                     </div>

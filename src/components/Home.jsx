@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom'
-import projects from '../data/projects.json'
+import projectsAndCerts from '../data/projectsAndCerts.json'
 import '../styles/home.css'
 
 export default function Home(){
 
-    const projectCards = projects.slice(0,2).map(project =>(
+    const projectCards = projectsAndCerts.slice(0,2).map(project =>(
         <>
             <Link to={`about#projects-${project.id}`} className='project-card' key={project.id}>
                 <h3>{project.name}</h3>
