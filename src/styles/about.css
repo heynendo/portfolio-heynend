@@ -87,7 +87,7 @@
 .history-card .content{
     display: grid;
     grid-template-columns: 40% 60%;
-    min-height: 400px;
+    min-height: 450px;
 }
 .history-card .content > ul{
     align-self: center;
@@ -243,7 +243,8 @@
     }
     .history-card .content{
         display: block;
-        min-height: 400px;
+        min-height: 475px;
+        align-content: center;
     }
     .history-card .content li{
         font-size: 0.8em;
@@ -255,7 +256,8 @@
     .projects-card .content{
         display: block;
         justify-items: center;
-        min-height: 400px;
+        align-content: space-around;
+        min-height: 550px;
     }
     .projects-card .content > img{
         display: flex;
@@ -282,10 +284,16 @@
     .projects-card .content > button:hover{
         font-size: 1em;
     }
+    .project-selector > h1{
+        font-size: 2em;
+    }
 }
 @media (max-width: 800px){
     .about > .card{
         width: 90vw;
+    }
+    .project-selector > h1{
+        min-width: 60vw;
     }
 }
 @media (max-width: 650px){
@@ -308,14 +316,14 @@
     .year-selector{
         margin-top: 10px;
     }
-    .project-selector > h1{
-        font-size: 2em;
-    }
     .project-selector > .arrow{
         transform: scale(3.5);
     }
     .project-selector > .arrow:hover{
         transform: scale(4);
+    }
+    .project-selector > h1{
+        font-size: 1.75em;
     }
     .about > h1{
         font-size: 2em;
