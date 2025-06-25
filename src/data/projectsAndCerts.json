@@ -9,11 +9,11 @@
         "linkText": "visit site"
     },
     {
-        "name": "NBA Stats",
+        "name": "NBA Stats (Beta)",
         "id": 2,
         "img": "/images/nbastats-logo.png",
         "shortDescription": "A React-based app for exploring basketball stats, featuring individual pages for players and teams, along with detailed comparison views for both.",
-        "longDescription": "This React project is a web app for exploring NBA player and team statistics. It features a searchable database of all teams and players, along with comparison pages for side-by-side stat analysis. I plan to continue expanding the app to include game stats, live scores, and more in-depth metrics for an even richer user experience. Currently in it's beta version, this is best viewed from a desktop with a Google Chrome browser. Mobile and further browser support will be coming in the future.",
+        "longDescription": "This React project is a web app for exploring NBA player and team statistics. It features a searchable database of all teams and players, along with comparison pages for side-by-side stat analysis. I plan to continue expanding the app to include game stats, live scores, and more in-depth metrics for an even richer user experience. Currently in it's beta version, this is best viewed from a desktop with a Google Chrome browser. Mobile and further browser support will be coming in the near future, among more features.",
         "link": "https://nba-stats-dl8.pages.dev/",
         "linkText": "visit site"
     },
