@@ -22,11 +22,15 @@ export default function Home(){
                 <div className='background'></div>
                 <img className='headshot' src="/images/headshot.jpg" />
                 <h1 className='name'>Donovan Heynen</h1>
-                <button className='button resume'>
+                <button className='button resume'
+                    onClick={() => window.open('/images/resumeDonovanHeynen.pdf', '_blank')} >
                     resume
                     <img src="/images/newlink-icon.png" />
                 </button>
-                <button className='button linkedin'>
+                <button 
+                    className='button linkedin'
+                    onClick={() => window.open('https://www.linkedin.com/in/donovanheynen/', '_blank')} 
+                >
                     linkedIn
                     <img src="/images/newlink-icon.png" />
                 </button>
