@@ -18,8 +18,18 @@
         "linkText": "visit site"
     },
     {
-        "name": "Fuller Photography",
+        "name": "Notes App",
         "id": 3,
+        "img": "/images/notesapp-logo.png",
+        "shortDescription": "Full-stack notes app using MERN (MongoDB, Express.js, React.js, Node.js) with secure user authentication.",
+        "longDescription": "Built a full-stack web application using the MERN stack (MongoDB, Express.js, React, Node.js), implementing RESTful APIs, JWT-based user authentication, and email password recovery. Designed a responsive UI for both desktop and mobile platforms using React. Deployed the frontend on Cloudflare Pages and the backend on Render, demonstrating experience with cloud hosting and modern DevOps workflows.",
+        "link": "https://notes-mern-app.pages.dev/",
+        "linkText": "visit site",
+        "gitLink": "https://github.com/heynendo/notes-MERN-app/tree/main"
+    },
+    {
+        "name": "Fuller Photography",
+        "id": 4,
         "img": "/images/fullerphoto-logo.png",
         "shortDescription": "A responsive website built for a photographer to showcase her portfolio through organized image galleries and a contact form to connect with new clients.",
         "longDescription": "This project is a custom-built website developed using vanilla HTML, CSS, and JavaScript for a professional photographer looking to showcase their portfolio. The site features organized photo albums, each containing high-quality images that can be viewed in an interactive pop-out window for a more immersive browsing experience. In addition to the visual galleries, a functional contact form was included to make it easy for potential clients to get in touch directly through the site. The goal was to create a clean, user-friendly interface that highlights the photographer's work while also supporting client engagement.",
@@ -28,7 +38,7 @@
     },
     {
         "name": "Front-End Certificate",
-        "id": 4,
+        "id": 5,
         "img": "/images/meta-logo.png",
         "shortDescription": "Completed Meta's Front-End Developer Certificate, learning HTML, CSS, JavaScript, React, Git, and UX/UI to build responsive, interactive websites. Gained hands-on experience through real projects and interview prep.",
         "longDescription": "I earned Meta's Front-End Developer Professional Certificate, a 9-course program that builds core front-end skills for real-world web development. The curriculum covered HTML, CSS, JavaScript, React, version control with Git, and UX/UI principles. I learned to create responsive, interactive websites and gained hands-on experience through a capstone project. The program also included interview preparation and problem-solving strategies to support job preparation.",
@@ -37,7 +47,7 @@
     },
     {
         "name": "React Certificate",
-        "id": 5,
+        "id": 6,
         "img": "/images/scrimba-logo.png",
         "shortDescription": "I completed Scrimba's Professional React Developer Specialization to learn basic and advanced concepts in React and apply these skills in real-world projects.",
         "longDescription": "I completed Scrimba's Professional React Developer Specialization, covering React fundamentals, state management, and advanced features for building responsive web apps. Through hands-on projects like apps and games, I sharpened my problem-solving skills and gained real-world experience. The course also included interview prep and coding challenges, testing my readiness for technical assessments and providing some real world expectations.",

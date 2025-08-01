@@ -27,7 +27,7 @@ export default function Header() {
             <div className='top'>
                 <Link to='/'>
                     <h3>Donovan Heynen</h3>
-                    <h3 className='light-italic'>Frontend Web Developer</h3>
+                    <h3 className='light-italic'>Full-Stack Web Developer</h3>
                 </Link>
                 {pageWidth > 1000 ? <nav className='lg'>
                     <Link to='/'>Home</Link>

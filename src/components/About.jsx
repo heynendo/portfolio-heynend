@@ -66,9 +66,9 @@ export default function About(){
                 <div>
                     <img src="/images/headshot.jpg"/>
                     <div className='about-p'>
-                        <p>I'm a front-end web developer with a passion for crafting clean, responsive, and user-friendly interfaces. I currently specialize in building dynamic pages with HTML, CSS, JavaScript, and React. With a strong eye for detail, I focus on writing efficient code and building responsive websites that look and feel great. I'm constantly exploring new technologies and best practices to stay current and keep improving as a developer.</p>
-
-                        <p>With a background in automotive engineering, I'm now transitioning into a career in web development, bringing with me a strong foundation in problem-solving and technical thinking. I've complemented my college and engineering experience with a formal education in front-end development, focusing on React, and I'm eager to apply these skills in a role that challenges and grows my capabilities. Currently I'm expanding into back-end technologies as I work toward becoming a full-stack developer.</p>
+                        <p>I'm a full-stack web developer with a passion for crafting clean, responsive, and user-friendly interfaces. I specialize in building dynamic applications with HTML, CSS, JavaScript, and React on the frontend, and have experience developing secure, scalable backends with Node.js, Express, and MongoDB. I focus on writing efficient, maintainable code and delivering seamless experiences across devices, while staying current with modern technologies and best practices.</p> 
+                        
+                        <p>With a background in automotive engineering, I bring strong problem-solving skills and technical thinking to my work as a developer. I've complemented my college and engineering experience with formal education in web development, including hands-on projects that integrate frontend and backend technologies. Currently, I'm continuing to expand my expertise in backend development, cloud deployment, and testing as I work toward mastering the full-stack development lifecycle.</p>
                     </div>
                 </div>
             </div>

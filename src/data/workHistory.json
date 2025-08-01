@@ -4,7 +4,7 @@
         "imgs": ["/images/gvsu-logo.png"],
         "data": 
         [
-            "Switched my major from Computer Engineering to Computer Science, while continuing to pursue a minor in Computer Engineering.",
+            "Switched majors from Computer Engineering to Computer Science, while continuing to pursue a minor in Computer Engineering.",
             "Tutored an introductory JavaScript programming course at Grand Valley State University, helping students build foundational coding skills.",
             "Worked seasonally between college semesters as a car dealership porter, cleaning cars, valeting customers, and assisting with vehicle management."
         ]
@@ -15,7 +15,6 @@
         "data": 
         [
             "Completed a 12-week summer internship with Stellantis as a Software Experience Intern, creating logic and signal networks of vehicle models for pre-production virtualization testing of un-released Stellantis vehicles.",
-            "Received a full-time offer to return to the same team at Stellantis following the internship, starting in January 2023.",
             "Collaborated with a team on a senior capstone project sponsored by Augusto Digital, developing a React-based web application — my first major development experience using React.",
             "Graduated from Grand Valley State University in December with a major in Computer Science and minors in Computer Engineering and Mathematics."
         ]
@@ -50,7 +49,7 @@
             "Earned Meta's Front-End Developer Professional Certificate and Scrimba's Professional React Developer Specialization through Coursera.",
             "Built and deployed native HTML, CSS, and JavaScript projects, including Fuller Photography and Rebie's Bakery, to strengthen foundational web development skills.",
             "Developed NBA Stats, a React-based application for exploring player and team statistics — further deepening my experience with modern front-end frameworks.",
-            "Continuing my education by beginning courses in backend development, while actively building new projects that reinforce and apply the skills being learned."
+            "Continuing my education by learning more about backend development, actively building new projects that reinforce and apply the skills being learned. See my new notes app in the projects section!"
         ]
     }
 ]
