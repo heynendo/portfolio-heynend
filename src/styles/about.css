@@ -196,7 +196,7 @@
     opacity: 0; 
     transition: 0s;
 }
-.projects-card .content > button{
+.projects-card .content button{
     grid-column: 2 / -1;
     grid-row: 2 / -2;
     background: rgba(255, 255, 255, 0.2);
@@ -215,16 +215,23 @@
     transition: opacity 1s;
     transition: 0.2s;
 }
-.projects-card .content.fade > button{
+.projects-card .content .git-project-links{
+    width: 100%;
+}
+.projects-card .content .git-project-links > button{
+    display: block;
+    margin: 10px auto;
+}
+.projects-card .content.fade button{
     opacity: 0; 
     transition: 0s;
 }
-.projects-card .content button > img{
+.projects-card .content button img{
     align-self: center;
     height: 15px;
     padding: 0 10px;
 }
-.projects-card .content > button:hover{
+.projects-card .content button:hover{
     font-size: 1.2em;
     letter-spacing: 1px;
     background: rgba(255, 255, 255, 0.5);
@@ -267,7 +274,7 @@
         width: 90%;
         justify-self: center;
     }
-    .projects-card .content > button{
+    .projects-card .content button{
         display: block;
         width: 50vw;
         margin-bottom: 30px;
@@ -278,10 +285,10 @@
         color: black;
         text-decoration: none;
     }
-    .projects-card .content button > img{
+    .projects-card .content button img{
         height: 10px;
     }
-    .projects-card .content > button:hover{
+    .projects-card .content button:hover{
         font-size: 1em;
     }
     .project-selector > h1{

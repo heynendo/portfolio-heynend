@@ -66,9 +66,9 @@ export default function About(){
                 <div>
                     <img src="/images/headshot.jpg"/>
                     <div className='about-p'>
-                        <p>I'm a full-stack web developer with a passion for crafting clean, responsive, and user-friendly interfaces. I specialize in building dynamic applications with HTML, CSS, JavaScript, and React on the frontend, and have experience developing secure, scalable backends with Node.js, Express, and MongoDB. I focus on writing efficient, maintainable code and delivering seamless experiences across devices, while staying current with modern technologies and best practices.</p> 
+                        <p>I'm a full-stack developer specializing in building responsive, user friendly interfaces with React. I develop secure, scalable backends through Node.js, Express, and MongoDB, and deliver production ready apps to cloud platforms. I write efficient, maintainable code and stay current with modern technologies.</p> 
                         
-                        <p>With a background in automotive engineering, I bring strong problem-solving skills and technical thinking to my work as a developer. I've complemented my college and engineering experience with formal education in web development, including hands-on projects that integrate frontend and backend technologies. Currently, I'm continuing to expand my expertise in backend development, cloud deployment, and testing as I work toward mastering the full-stack development lifecycle.</p>
+                        <p>With a computer science degree and background in automotive engineering, I bring strong problem-solving skills and technical thinking to my work. I've completed formal training in frontend development with React, followed by hands-on projects that integrate both frontend and backend technologies. Currently, I'm expanding my backend expertise through cloud deployment, automation, and testing as I work toward mastering the full stack development lifecycle.</p>
                     </div>
                 </div>
             </div>
@@ -128,12 +128,29 @@ export default function About(){
                     <div className={`content ${projectFade ? 'fade' : ''}`}>
                         <img src={project.img}/>
                         <p>{project.longDescription}</p>
-                        <button
-                            onClick={() => window.open(`${project.link}`, '_blank')} 
-                        >
-                            {project.linkText} 
-                            <img src="/images/newlink-icon.png" />
-                        </button>
+                        {project.gitLink ? 
+                            <div className='git-project-links'>
+                                <button
+                                    onClick={() => window.open(`${project.link}`, '_blank')} 
+                                >
+                                    {project.linkText} 
+                                    <img src="/images/newlink-icon.png" />
+                                </button>
+                                <button
+                                    onClick={() => window.open(`${project.gitLink}`, '_blank')} 
+                                >
+                                    GitHub link 
+                                    <img src="/images/newlink-icon.png" />
+                                </button>
+                            </div> 
+                        :
+                            <button
+                                onClick={() => window.open(`${project.link}`, '_blank')} 
+                            >
+                                {project.linkText} 
+                                <img src="/images/newlink-icon.png" />
+                            </button>
+                        }
                     </div>
                     <div className='project-selector'>
                         <FaAngleLeft 
