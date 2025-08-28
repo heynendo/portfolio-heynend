@@ -138,10 +138,11 @@ export default function About(){
                 <div className='head'>
                     <h3>Projects & Certificates</h3>
                     <div>
-                        {projectsAndCerts.map(project => 
+                        {projectsAndCerts.map(proj => 
                             <div className='dot' 
-                                onClick={() => changeProjectDot(project.id)}
-                                title={project.name}
+                                onClick={() => changeProjectDot(proj.id)}
+                                style={{ opacity: project.id === proj.id ? 1 : 0.5 }}
+                                title={proj.name}
                             />
                         )}
                     </div>
