@@ -4,7 +4,7 @@
         "imgs": ["/images/gvsu-logo.png"],
         "data": 
         [
-            "Switched majors from Computer Engineering to Computer Science, while continuing to pursue a minor in Computer Engineering.",
+            "Completed my Computer Engineering minor while continuing to pursure a major in Computer Science.",
             "Tutored an introductory JavaScript programming course at Grand Valley State University, helping students build foundational coding skills.",
             "Worked seasonally between college semesters as a car dealership porter, cleaning cars, valeting customers, and assisting with vehicle management."
         ]
@@ -37,8 +37,8 @@
         [
             "Expanded responsibilities to include debugging and testing Plant Models from a higher-level perspective, collaborating with testing and computer engineers to troubleshoot and resolve complex system issues.",
             "Shifted focus toward larger project pipeline management, supporting high-priority debugging efforts and on-time delivery of critical model updates.",
-            "Chose to leave my full-time role at Stellantis at the end of the year to pursue a new career in web development. While I value the experience, I realized my long-term interests were better aligned with software and front-end development.",
-            "Began classes in front-end web development through Coursera in November, focusing on building practical skills in modern web technologies."
+            "Chose to leave my full-time role at Stellantis to pursue a career more aligned with my interests and education - web development.",
+            "Began classes in front-end web development through Coursera in November, focusing on building foundational and practical skills in modern web technologies."
         ]
     },
     {
@@ -47,9 +47,8 @@
         "data": 
         [
             "Earned Meta's Front-End Developer Professional Certificate and Scrimba's Professional React Developer Specialization through Coursera.",
-            "Built and deployed native HTML, CSS, and JavaScript projects, including Fuller Photography and Rebie's Bakery, to strengthen foundational web development skills.",
-            "Developed NBA Stats, a React-based application for exploring player and team statistics — further deepening my experience with modern front-end frameworks.",
-            "Continuing my education by learning more about backend development, actively building new projects that reinforce and apply the skills being learned. See my new notes app in the projects section!"
+            "Built many new responsive websites and began working with clients, including Fuller Photography and Rebie's Bakery - check out the projects section below for more details.",
+            "Continuing my education by learning more about backend development, actively building new projects that reinforce and apply the skills being learned. See my notes app in the projects section to check out my full-stack skills!"
         ]
     }
 ]

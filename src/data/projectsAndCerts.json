@@ -1,20 +1,20 @@
 [
     {
-        "name": "Rebie's Bakery",
+        "name": "Fuller Photography",
         "id": 1,
-        "img": "/images/rebies-logo.png",
-        "shortDescription": "A responsive website for a small bakery business that allows the owner to showcase her creations and reach new customers.",
-        "longDescription": "This project is a custom-built website developed using vanilla HTML, CSS, and JavaScript for a small bakery business. It provides the owner a place to showcase all the different types of baked goods she creates, along with menu items with pricing. This is an outlet for her to reach new customers and is regularly maintained.",
-        "link": "https://rebies-bakery.com",
+        "img": "/images/fullerphoto-logo.png",
+        "shortDescription": "A responsive website built for a photographer to showcase her portfolio through organized image galleries and a contact form to connect with new clients.",
+        "longDescription": "This project is a custom-built website developed using React for a professional photographer looking to showcase their portfolio. The goal was to create a clean, user-friendly interface that highlights the photographer's work while also supporting client engagement. The site features organized photo albums, each containing high-quality images that can be viewed in an interactive gallery window for a more immersive browsing experience. In addition to the visual galleries, a functional contact form was included to make it easy for potential clients to get in touch directly through the site.",
+        "link": "https://helayna-fuller-photography.pages.dev/",
         "linkText": "visit site"
     },
     {
-        "name": "NBA Stats (Beta)",
+        "name": "Rebie's Bakery",
         "id": 2,
-        "img": "/images/nbastats-logo.png",
-        "shortDescription": "A React-based app for exploring basketball stats, featuring individual pages for players and teams, along with detailed comparison views for both.",
-        "longDescription": "This React project is a web app for exploring NBA player and team statistics. It features a searchable database of all teams and players, along with comparison pages for side-by-side stat analysis. I plan to continue expanding the app to include game stats, live scores, and more in-depth metrics for an even richer user experience. Currently in it's beta version, this is best viewed from a desktop with a Google Chrome browser. Mobile and further browser support will be coming in the near future, among more features.",
-        "link": "https://nba-stats-dl8.pages.dev/",
+        "img": "/images/rebies-logo.png",
+        "shortDescription": "A responsive website for a small bakery business that allows the owner to showcase her creations and reach new customers.",
+        "longDescription": "This project is a custom-built website developed using React for a small bakery business. It provides the owner a place to showcase all the different types of baked goods she creates, along with menu items with pricing. This is an outlet for her to reach new customers and is regularly maintained.",
+        "link": "https://rebies-bakery.com",
         "linkText": "visit site"
     },
     {
@@ -28,12 +28,12 @@
         "gitLink": "https://github.com/heynendo/notes-MERN-app/tree/main"
     },
     {
-        "name": "Fuller Photography",
+        "name": "NBA Stats (Beta)",
         "id": 4,
-        "img": "/images/fullerphoto-logo.png",
-        "shortDescription": "A responsive website built for a photographer to showcase her portfolio through organized image galleries and a contact form to connect with new clients.",
-        "longDescription": "This project is a custom-built website developed using vanilla HTML, CSS, and JavaScript for a professional photographer looking to showcase their portfolio. The site features organized photo albums, each containing high-quality images that can be viewed in an interactive pop-out window for a more immersive browsing experience. In addition to the visual galleries, a functional contact form was included to make it easy for potential clients to get in touch directly through the site. The goal was to create a clean, user-friendly interface that highlights the photographer's work while also supporting client engagement.",
-        "link": "https://helayna-fuller-photography.pages.dev/",
+        "img": "/images/nbastats-logo.png",
+        "shortDescription": "A React-based app for exploring basketball stats, featuring individual pages for players and teams, along with detailed comparison views for both.",
+        "longDescription": "This React project is a web app for exploring NBA player and team statistics. It features a searchable database of all teams and players, along with comparison pages for side-by-side stat analysis. I plan to continue expanding the app to include game stats, live scores, and more in-depth metrics for an even richer user experience. Currently in it's beta version, this is best viewed from a desktop with a Google Chrome browser. Mobile and further browser support will be coming in the near future, among more features.",
+        "link": "https://nba-stats-dl8.pages.dev/",
         "linkText": "visit site"
     },
     {

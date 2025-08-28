@@ -26,7 +26,7 @@ export default function About(){
         }, 50)
     },[year])
 
-    useEffect(() => { //FIXME: update to include setting the correct project
+    useEffect(() => {
         if (hash) {
             const hashSplit = hash.split('-')
             const element = document.querySelector(hashSplit[0])
@@ -57,8 +57,17 @@ export default function About(){
         }, 50)
     }
 
-    
+    function changeProjectDot(projectId){
 
+        setProject(projectsAndCerts.find(x => x.id === projectId))
+
+        setProjectFade(true)
+        setTimeout(() => {
+            setProjectFade(false)
+        }, 50)
+    }
+
+    
     return(
         <div className="about">
             <div className="card about-card">
@@ -66,9 +75,12 @@ export default function About(){
                 <div>
                     <img src="/images/headshot.jpg"/>
                     <div className='about-p'>
-                        <p>I'm a full-stack developer specializing in building responsive, user friendly interfaces with React. I develop secure, scalable backends through Node.js, Express, and MongoDB, and deliver production ready apps to cloud platforms. I write efficient, maintainable code and stay current with modern technologies.</p> 
+                        <p>I'm a full-stack developer specializing in building responsive, user friendly interfaces with React. I develop secure, scalable backends through Node.js, Express, and MongoDB, and deliver production ready apps to cloud platforms. I write efficient, maintainable code and stay current with modern technologies to create seamless user experiences.</p> 
                         
-                        <p>With a computer science degree and background in automotive engineering, I bring strong problem-solving skills and technical thinking to my work. I've completed formal training in frontend development with React, followed by hands-on projects that integrate both frontend and backend technologies. Currently, I'm expanding my backend expertise through cloud deployment, automation, and testing as I work toward mastering the full stack development lifecycle.</p>
+                        <p>With a computer science degree and background in automotive engineering, I bring strong problem-solving skills and technical thinking to my work. I've completed formal training in frontend development with React, followed by hands-on projects that integrate both frontend and backend technologies.</p>
+                        <p>
+                            I am always looking for new projects - if you're seeking a developer for your next project, website, or app, I'd be happy to connect.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -123,7 +135,17 @@ export default function About(){
                 </div>
             </div>
             <div className="card projects-card" id='projects'>
-                <h3>Projects & Certificates</h3>
+                <div className='head'>
+                    <h3>Projects & Certificates</h3>
+                    <div>
+                        {projectsAndCerts.map(project => 
+                            <div className='dot' 
+                                onClick={() => changeProjectDot(project.id)}
+                                title={project.name}
+                            />
+                        )}
+                    </div>
+                </div>
                 <div>
                     <div className={`content ${projectFade ? 'fade' : ''}`}>
                         <img src={project.img}/>

@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/header.css'
 
+//TODO: add framer motion animations when coming into view
+
 export default function Header() {
 
     const [pageWidth, setPageWidth] = useState(window.innerWidth)
