@@ -118,7 +118,7 @@
     transition: 0s;
 }
 .about > .projects-card{
-    margin-bottom: 150px;
+    margin: 75px auto;
 }
 .projects-card .project-selector{
     display: flex;

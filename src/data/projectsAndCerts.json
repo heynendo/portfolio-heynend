@@ -1,7 +1,16 @@
 [
     {
-        "name": "Fuller Photography",
+        "name": "Git Repo Tracker",
         "id": 1,
+        "img": "/images/gitrepo-tracker-logo.png",
+        "shortDescription": "A React website built for developers, that takes a public git URL and visualizes all branches, commits, and commit details from the repo.",
+        "longDescription": "A React website built for developers, that takes a public git URL and visualizes all branches, commits, and commit details from the repo. This also allows users to download commit details in .json, .xlsx, and .csv formats.",
+        "link": "https://git-repo-tracker.pages.dev/",
+        "linkText": "visit site"
+    },
+    {
+        "name": "Fuller Photography",
+        "id": 2,
         "img": "/images/fullerphoto-logo.png",
         "shortDescription": "A responsive website built for a photographer to showcase her portfolio through organized image galleries and a contact form to connect with new clients.",
         "longDescription": "This project is a custom-built website developed using React for a professional photographer looking to showcase their portfolio. The goal was to create a clean, user-friendly interface that highlights the photographer's work while also supporting client engagement. The site features organized photo albums, each containing high-quality images that can be viewed in an interactive gallery window for a more immersive browsing experience. In addition to the visual galleries, a functional contact form was included to make it easy for potential clients to get in touch directly through the site.",
@@ -10,7 +19,7 @@
     },
     {
         "name": "Rebie's Bakery",
-        "id": 2,
+        "id": 3,
         "img": "/images/rebies-logo.png",
         "shortDescription": "A responsive website for a small bakery business that allows the owner to showcase her creations and reach new customers.",
         "longDescription": "This project is a custom-built website developed using React for a small bakery business. It provides the owner a place to showcase all the different types of baked goods she creates, along with menu items with pricing. This is an outlet for her to reach new customers and is regularly maintained.",
@@ -19,7 +28,7 @@
     },
     {
         "name": "Notes App",
-        "id": 3,
+        "id": 4,
         "img": "/images/notesapp-logo.png",
         "shortDescription": "Full-stack notes app using MERN (MongoDB, Express.js, React.js, Node.js) with secure user authentication.",
         "longDescription": "Built a full-stack web application using the MERN stack (MongoDB, Express.js, React, Node.js), implementing RESTful APIs, JWT-based user authentication, and email password recovery. Designed a responsive UI for both desktop and mobile platforms using React. Deployed the frontend on Cloudflare Pages and the backend on Render, demonstrating experience with cloud hosting and modern DevOps workflows.",
@@ -29,7 +38,7 @@
     },
     {
         "name": "NBA Stats (Beta)",
-        "id": 4,
+        "id": 5,
         "img": "/images/nbastats-logo.png",
         "shortDescription": "A React-based app for exploring basketball stats, featuring individual pages for players and teams, along with detailed comparison views for both.",
         "longDescription": "This React project is a web app for exploring NBA player and team statistics. It features a searchable database of all teams and players, along with comparison pages for side-by-side stat analysis. I plan to continue expanding the app to include game stats, live scores, and more in-depth metrics for an even richer user experience. Currently in it's beta version, this is best viewed from a desktop with a Google Chrome browser. Mobile and further browser support will be coming in the near future, among more features.",
@@ -38,7 +47,7 @@
     },
     {
         "name": "Front-End Certificate",
-        "id": 5,
+        "id": 6,
         "img": "/images/meta-logo.png",
         "shortDescription": "Completed Meta's Front-End Developer Certificate, learning HTML, CSS, JavaScript, React, Git, and UX/UI to build responsive, interactive websites. Gained hands-on experience through real projects and interview prep.",
         "longDescription": "I earned Meta's Front-End Developer Professional Certificate, a 9-course program that builds core front-end skills for real-world web development. The curriculum covered HTML, CSS, JavaScript, React, version control with Git, and UX/UI principles. I learned to create responsive, interactive websites and gained hands-on experience through a capstone project. The program also included interview preparation and problem-solving strategies to support job preparation.",
@@ -47,7 +56,7 @@
     },
     {
         "name": "React Certificate",
-        "id": 6,
+        "id": 7,
         "img": "/images/scrimba-logo.png",
         "shortDescription": "I completed Scrimba's Professional React Developer Specialization to learn basic and advanced concepts in React and apply these skills in real-world projects.",
         "longDescription": "I completed Scrimba's Professional React Developer Specialization, covering React fundamentals, state management, and advanced features for building responsive web apps. Through hands-on projects like apps and games, I sharpened my problem-solving skills and gained real-world experience. The course also included interview prep and coding challenges, testing my readiness for technical assessments and providing some real world expectations.",

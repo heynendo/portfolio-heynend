@@ -84,56 +84,6 @@ export default function About(){
                     </div>
                 </div>
             </div>
-            <h1>Past to Present</h1>
-            <div className="card history-card">
-                <h3>Work & Education</h3>
-                <div>
-                    <div className={`content ${yearFade ? 'fade' : ''}`}>
-                        <img src={yearData.imgs[0]}/>
-                        <ul>
-                            {yearData?.data?.map((point, index) => (
-                                <li key={index}>{point}</li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div className='year-selector'>
-                        <span onClick={() => setYear("2021")}>
-                            {year === "2021" ? 
-                                <h1 className='lg selected'>{year}</h1> : 
-                                <h1 className='lg'>21</h1>
-                            }
-                        </span>
-                        <div className='vert-break'></div>
-                        <span onClick={() => setYear("2022")}>
-                            {year === "2022" ? 
-                                <h1 className='lg selected'>{year}</h1> : 
-                                <h1 className='lg'>22</h1>
-                            }
-                        </span>
-                        <div className='vert-break'></div>
-                        <span onClick={() => setYear("2023")}>
-                            {year === "2023" ? 
-                                <h1 className='lg selected'>{year}</h1> : 
-                                <h1 className='lg'>23</h1>
-                            }
-                        </span>
-                        <div className='vert-break'></div>
-                        <span onClick={() => setYear("2024")}>
-                            {year === "2024" ? 
-                                <h1 className='lg selected'>{year}</h1> : 
-                                <h1 className='lg'>24</h1>
-                            }
-                        </span>
-                        <div className='vert-break'></div>
-                        <span onClick={() => setYear("2025")}>
-                            {year === "2025" ? 
-                                <h1 className='lg selected'>{year}</h1> : 
-                                <h1 className='lg'>25</h1>
-                            }
-                        </span>
-                    </div>
-                </div>
-            </div>
             <div className="card projects-card" id='projects'>
                 <div className='head'>
                     <h3>Projects & Certificates</h3>
@@ -187,6 +137,56 @@ export default function About(){
                             className='arrow'
                             onClick={() => changeProject(1)}
                         />
+                    </div>
+                </div>
+            </div>
+            <h1>Past to Present</h1>
+            <div className="card history-card">
+                <h3>Work & Education</h3>
+                <div>
+                    <div className={`content ${yearFade ? 'fade' : ''}`}>
+                        <img src={yearData.imgs[0]}/>
+                        <ul>
+                            {yearData?.data?.map((point, index) => (
+                                <li key={index}>{point}</li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div className='year-selector'>
+                        <span onClick={() => setYear("2021")}>
+                            {year === "2021" ? 
+                                <h1 className='lg selected'>{year}</h1> : 
+                                <h1 className='lg'>21</h1>
+                            }
+                        </span>
+                        <div className='vert-break'></div>
+                        <span onClick={() => setYear("2022")}>
+                            {year === "2022" ? 
+                                <h1 className='lg selected'>{year}</h1> : 
+                                <h1 className='lg'>22</h1>
+                            }
+                        </span>
+                        <div className='vert-break'></div>
+                        <span onClick={() => setYear("2023")}>
+                            {year === "2023" ? 
+                                <h1 className='lg selected'>{year}</h1> : 
+                                <h1 className='lg'>23</h1>
+                            }
+                        </span>
+                        <div className='vert-break'></div>
+                        <span onClick={() => setYear("2024")}>
+                            {year === "2024" ? 
+                                <h1 className='lg selected'>{year}</h1> : 
+                                <h1 className='lg'>24</h1>
+                            }
+                        </span>
+                        <div className='vert-break'></div>
+                        <span onClick={() => setYear("2025")}>
+                            {year === "2025" ? 
+                                <h1 className='lg selected'>{year}</h1> : 
+                                <h1 className='lg'>25</h1>
+                            }
+                        </span>
                     </div>
                 </div>
             </div>
