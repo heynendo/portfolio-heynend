@@ -51,7 +51,7 @@ export default function Contact(){
         }
         try {
             //const response = await fetch("https://email.donovanheynen.com/", {
-            const response = await fetch("https://email-sender.heynen-donovan.workers.dev/", {
+            const response = await fetch("https://emailserver-resend.heynen-donovan.workers.dev/", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
