@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import {useState} from 'react'
 import '../styles/contact.css'
 
 export default function Contact(){
@@ -42,9 +42,40 @@ export default function Contact(){
         const error = validateField(name, value)
         setErrors(prev => ({ ...prev, [name]: error }))
     }
-    function handleSubmit(e){
+    async function handleSubmit(e){
         e.preventDefault()
-        if (validateForm()){
+
+        if (!validateForm()) {
+            setSubmit(null)
+            return
+        }
+        try {
+            //const response = await fetch("https://email.donovanheynen.com/", {
+            const response = await fetch("https://email-sender.heynen-donovan.workers.dev/", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                console.log("Form submitted:", formData);
+                alert("Message sent.")
+                setFormData({ name: "", email: "", subject: "", message: "" });
+                setSubmit(true);
+            } else {
+                console.error("Failed to send message:", await response.text());
+                alert("Failed to send message")
+                setSubmit(false);
+            }
+        } catch (err) {
+            console.error("Error submitting form:", err);
+            alert("Error sending message")
+            setSubmit(false);
+        }
+
+        /*if (validateForm()){
             fetch('https://formsubmit.co/heynen.donovan@gmail.com', {
                 method: 'POST',
                 headers: {
@@ -65,7 +96,7 @@ export default function Contact(){
 
             console.log('Form submitted:', formData)
             setFormData({ name: '', email: '', subject: '', message: '' })
-        } else { setSubmit(null)}
+        } else { setSubmit(null)}*/
     }
 
     return(
@@ -125,8 +156,8 @@ export default function Contact(){
                         <div></div>
                         <button type='submit'>Send</button>
                     </div>
-                    {submit && <p className='submit-msg'>Message sent.</p>}
-                    {submit === false ? <p className='submit-error'>Failed to send.</p>: ''}
+                    {/*submit && <p className='submit-msg'>Message sent.</p>*/}
+                    {/*submit === false ? <p className='submit-error'>Failed to send.</p>: ''*/}
                 </form>
             </div>
         </div>
