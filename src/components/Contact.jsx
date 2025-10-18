@@ -2,13 +2,18 @@ import {useState} from 'react'
 import '../styles/contact.css'
 
 export default function Contact(){
+    const API_URL = import.meta.env.DEV
+        ? "http://localhost:8787/" // localhost dev
+        : "https://emailserver-resend.heynen-donovan.workers.dev/"
 
-    const [formData, setFormData] = useState({
+    const defaultFormData = {
+        site: 'donovanheynen',
         name: '',
         email: '',
         subject: '',
         message: ''
-    })
+    }
+    const [formData, setFormData] = useState(defaultFormData)
     const [errors, setErrors] = useState({})
     const [submit, setSubmit] = useState(null)
 
@@ -51,7 +56,7 @@ export default function Contact(){
         }
         try {
             //const response = await fetch("https://email.donovanheynen.com/", {
-            const response = await fetch("https://emailserver-resend.heynen-donovan.workers.dev/", {
+            const response = await fetch(API_URL, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -62,7 +67,7 @@ export default function Contact(){
             if (response.ok) {
                 console.log("Form submitted:", formData);
                 alert("Message sent.")
-                setFormData({ name: "", email: "", subject: "", message: "" });
+                setFormData(defaultFormData);
                 setSubmit(true);
             } else {
                 console.error("Failed to send message:", await response.text());
@@ -74,29 +79,6 @@ export default function Contact(){
             alert("Error sending message")
             setSubmit(false);
         }
-
-        /*if (validateForm()){
-            fetch('https://formsubmit.co/heynen.donovan@gmail.com', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                body: new URLSearchParams(formData).toString()
-            })
-            .then(response => {
-                if (response.ok) {
-                    console.log('Form submitted:', formData)
-                    setFormData({ name: '', email: '', subject: '', message: '' })
-                    setSubmit(true)
-                } else {
-                    setSubmit(false)
-                }
-            })
-
-
-            console.log('Form submitted:', formData)
-            setFormData({ name: '', email: '', subject: '', message: '' })
-        } else { setSubmit(null)}*/
     }
 
     return(
