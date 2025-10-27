@@ -3,7 +3,7 @@ import { AnimatePresence } from "framer-motion"
 import { StrictMode } from 'react'
 import MotionWrapper from "./functions/MotionWrapper"
 import { createRoot } from 'react-dom/client'
-import './index.css'
+import './styles/index.css'
 import Layout from './components/Layout'
 import Home from './components/Home'
 import About from "./components/About"
