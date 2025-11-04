@@ -1,193 +1,84 @@
-import React, {useState, useEffect} from 'react'
-import { useLocation } from 'react-router-dom'
-import workHistory from '../data/workHistory.json'
-import projectsAndCerts from '../data/projectsAndCerts.json'
+import {useState, useEffect} from 'react'
 import '../styles/about.css'
-import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
+import AboutNav from '../components/AboutNav'
+import skills from '../data/skills.json'
+import certificates from '../data/certificates.json'
 
 export default function About(){
 
-    const { hash } = useLocation()
-
-    const [projectFade, setProjectFade] = useState(false)
-    const [yearFade, setYearFade] = useState(false)
-    const [year, setYear] = useState('2025')
-    const [yearData, setYearData] = useState(() => 
-        workHistory.find(x => x.year === year))
-    const [project, setProject] = useState(() => 
-        projectsAndCerts.find(x => x.id === 1))
-
+    const [pageWidth, setPageWidth] = useState(window.innerWidth)
     useEffect(() => {
-        setYearData(() => workHistory.find(x => x.year === year))
-
-        setYearFade(true)
-        setTimeout(() => {
-            setYearFade(false)
-        }, 50)
-    },[year])
-
-    useEffect(() => {
-        if (hash) {
-            const hashSplit = hash.split('-')
-            const element = document.querySelector(hashSplit[0])
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
-            if (hashSplit.length > 1){
-                setProject(projectsAndCerts.find(x => x.id === Number(hashSplit[1])))
-            }
+        const handleResize = () => {
+            setPageWidth(window.innerWidth)
         }
-    }, [hash])
+        window.addEventListener('resize', handleResize)
+        return () => window.removeEventListener('resize', handleResize)
+    },[])
 
-    function changeProject(x){
+    const [navContent, setNavContent] = useState("Skills")
 
-        const nextProj = project.id + x
-
-        if (nextProj < 1){
-            setProject(projectsAndCerts.find(x => x.id === projectsAndCerts.length))
-        }else if (nextProj > projectsAndCerts.length){
-            setProject(projectsAndCerts.find(x => x.id === 1))
-        }else{
-            setProject(projectsAndCerts.find(x => x.id === nextProj))
-        }
-
-        setProjectFade(true)
-        setTimeout(() => {
-            setProjectFade(false)
-        }, 50)
-    }
-
-    function changeProjectDot(projectId){
-
-        setProject(projectsAndCerts.find(x => x.id === projectId))
-
-        setProjectFade(true)
-        setTimeout(() => {
-            setProjectFade(false)
-        }, 50)
-    }
-
+    const frontendSkillCards = skills.frontend.map(skill => (
+        <div className='skill-card' key={skill.name}>
+            <img src={skill.logo} />
+            <h4>{skill.name}</h4>
+        </div>
+    ))
+    const backendSkillCards = skills.backend.map(skill => (
+        <div className='skill-card' key={skill.name}>
+            <img src={skill.logo} />
+            <h4>{skill.name}</h4>
+        </div>
+    ))
+    const moreSKillCards = skills.other.map(skill => (
+        <div className='skill-card' key={skill.name}>
+            <img src={skill.logo} />
+            <h4>{skill.name}</h4>
+        </div>
+    ))
+    const certs = certificates.map(cert => (
+        <div className='cert-card' key={cert.name}>
+            <img src={cert.img} />
+            <h4>{cert.name}</h4>
+        </div>
+    ))
     
     return(
         <div className="about">
-            <div className="card about-card">
-                <h3>About Me</h3>
-                <div>
-                    <img src="/images/headshot.jpg"/>
-                    <div className='about-p'>
-                        <p>I'm a full-stack developer specializing in building responsive, user friendly interfaces with React. I develop secure, scalable backends through Node.js, Express, and MongoDB, and deliver production ready apps to cloud platforms. I write efficient, maintainable code and stay current with modern technologies to create seamless user experiences.</p> 
-                        
-                        <p>With a computer science degree and background in automotive engineering, I bring strong problem-solving skills and technical thinking to my work. I've completed formal training in frontend development with React, followed by hands-on projects that integrate both frontend and backend technologies.</p>
-                        <p>
-                            I am always looking for new projects - if you're seeking a developer for your next project, website, or app, I'd be happy to connect.
-                        </p>
+            <div className='content'>
+                {pageWidth > 750 ? <img className='headshot' src="/images/headshot.jpg"/> : ''}
+                <div className='body'>
+                    <h1>About Me</h1>
+                    <p>I'm Donovan Heynen, a full-stack web developer specializing in creating modern, mobile-responsive websites that help small and medium businesses establish and grow their online presence. Whether you need a professional site to showcase your services, an interactive platform to engage customers, or a custom solution built for your specific needs, I deliver reliable results that make it easy for people to find you and connect with your business.</p>
+                    <p>I handle the complete development process—from website design, domain setup and deployment, search engine optimization, and ongoing support—giving you a single partner for everything.</p>
+                    <AboutNav 
+                        navContent={navContent} 
+                        setNavContent={setNavContent}
+                    />
+                    {navContent === "Skills" ? 
+                    <div className='skills'>
+                        <h3>Frontend</h3>
+                        <div className='skill-cards'>
+                            {frontendSkillCards}
+                        </div>
+                        <h3>Backend & Hosting</h3>
+                        <div className='skill-cards'>
+                            {backendSkillCards}
+                        </div>
+                        <h3>More</h3>
+                        <div className='skill-cards'>
+                            {moreSKillCards}
+                        </div>
                     </div>
-                </div>
-            </div>
-            <h1>Past to Present</h1>
-            <div className="card history-card">
-                <h3>Work & Education</h3>
-                <div>
-                    <div className={`content ${yearFade ? 'fade' : ''}`}>
-                        <img src={yearData.imgs[0]}/>
-                        <ul>
-                            {yearData?.data?.map((point, index) => (
-                                <li key={index}>{point}</li>
-                            ))}
-                        </ul>
+                    :
+                    <div className='education'>
+                        <h3>B.S. in Computer Science at Grand Valley State University (2022)</h3>
+                        <span>Minors in Computer Engineering & Mathematics</span>
+                        <h3>Certifications</h3>
+                        <div className='certifications'>
+                            {certs}
+                        </div>
                     </div>
-                    <div className='year-selector'>
-                        <span onClick={() => setYear("2021")}>
-                            {year === "2021" ? 
-                                <h1 className='lg selected'>{year}</h1> : 
-                                <h1 className='lg'>21</h1>
-                            }
-                        </span>
-                        <div className='vert-break'></div>
-                        <span onClick={() => setYear("2022")}>
-                            {year === "2022" ? 
-                                <h1 className='lg selected'>{year}</h1> : 
-                                <h1 className='lg'>22</h1>
-                            }
-                        </span>
-                        <div className='vert-break'></div>
-                        <span onClick={() => setYear("2023")}>
-                            {year === "2023" ? 
-                                <h1 className='lg selected'>{year}</h1> : 
-                                <h1 className='lg'>23</h1>
-                            }
-                        </span>
-                        <div className='vert-break'></div>
-                        <span onClick={() => setYear("2024")}>
-                            {year === "2024" ? 
-                                <h1 className='lg selected'>{year}</h1> : 
-                                <h1 className='lg'>24</h1>
-                            }
-                        </span>
-                        <div className='vert-break'></div>
-                        <span onClick={() => setYear("2025")}>
-                            {year === "2025" ? 
-                                <h1 className='lg selected'>{year}</h1> : 
-                                <h1 className='lg'>25</h1>
-                            }
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div className="card projects-card" id='projects'>
-                <div className='head'>
-                    <h3>Projects & Certificates</h3>
-                    <div>
-                        {projectsAndCerts.map(proj => 
-                            <div className='dot' 
-                                onClick={() => changeProjectDot(proj.id)}
-                                style={{ opacity: project.id === proj.id ? 1 : 0.5 }}
-                                title={proj.name}
-                            />
-                        )}
-                    </div>
-                </div>
-                <div>
-                    <div className={`content ${projectFade ? 'fade' : ''}`}>
-                        <img src={project.img}/>
-                        <p>{project.longDescription}</p>
-                        {project.gitLink ? 
-                            <div className='git-project-links'>
-                                <button
-                                    onClick={() => window.open(`${project.link}`, '_blank')} 
-                                >
-                                    {project.linkText} 
-                                    <img src="/images/newlink-icon.png" />
-                                </button>
-                                <button
-                                    onClick={() => window.open(`${project.gitLink}`, '_blank')} 
-                                >
-                                    GitHub link 
-                                    <img src="/images/newlink-icon.png" />
-                                </button>
-                            </div> 
-                        :
-                            <button
-                                onClick={() => window.open(`${project.link}`, '_blank')} 
-                            >
-                                {project.linkText} 
-                                <img src="/images/newlink-icon.png" />
-                            </button>
-                        }
-                    </div>
-                    <div className='project-selector'>
-                        <FaAngleLeft 
-                            className='arrow'
-                            onClick={() => changeProject(-1)}
-                        />
-                        <h1 className={`project-name ${projectFade ? 'fade' : ''}`}>
-                            {project.name}
-                        </h1>
-                        <FaAngleRight 
-                            className='arrow'
-                            onClick={() => changeProject(1)}
-                        />
-                    </div>
+                    }
                 </div>
             </div>
         </div>

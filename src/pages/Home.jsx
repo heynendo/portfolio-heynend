@@ -1,52 +1,27 @@
-import { Link } from 'react-router-dom'
-import projectsAndCerts from '../data/projectsAndCerts.json'
+import { Link, useNavigate } from 'react-router-dom'
 import '../styles/home.css'
+import ArrowIcon from '../components/icons/ArrowIcon'
+import HandleNavigation from '../functions/HandleNavigation'
 
 export default function Home(){
 
-    const projectCards = projectsAndCerts.slice(0,2).map(project =>(
-        <>
-            <Link to={`about#projects-${project.id}`} className='project-card' key={project.id}>
-                <h3>{project.name}</h3>
-                <img src={project.img} />
-                <p>{project.shortDescription}</p>
-                <div className='background'></div>
-            </Link>
-            <div className='vert-break'></div>
-        </>
-    ))
+    const navigate = useNavigate()
 
     return(
         <div className="home">
-            <div className="main-card">
-                <div className='background'></div>
-                <img className='headshot' src="/images/headshot.jpg" />
-                <h1 className='name'>Donovan Heynen</h1>
-                <button className='button resume'
-                    onClick={() => window.open('/images/resumeDonovanHeynen.pdf', '_blank')} >
-                    resume
-                    <img src="/images/newlink-icon.png" />
-                </button>
-                <button 
-                    className='button linkedin'
-                    onClick={() => window.open('https://www.linkedin.com/in/donovanheynen/', '_blank')} 
+            <div className='content'>
+                <h2>Donovan Heynen</h2>
+                <h1 className='title'>Freelance Web Developer</h1>
+                <div className='main'>
+                    <div>
+                        add graphic with some highlights + hero text
+                    </div>
+                    <img className='headshot' src="/images/headshot.jpg" />
+                </div>
+                <div className='learn-more' 
+                    onClick={() => {HandleNavigation(navigate, "about", "/about")}}
                 >
-                    linkedIn
-                    <img src="/images/newlink-icon.png" />
-                </button>
-                <Link 
-                    to='about' 
-                    className='button more'
-                >
-                    learn more
-                </Link>
-            </div>
-            <div className='projects'>
-                <h3>Projects</h3>
-                <div className='break'></div>
-                <div className='cards'>
-                    {projectCards}
-                    <Link to='about#projects' className='project-link'><h3>see all projects</h3></Link>
+                    learn more <ArrowIcon />
                 </div>
             </div>
         </div>

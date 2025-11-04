@@ -1,0 +1,23 @@
+[
+    {
+        "name": "XCL Property Management",
+        "id": 1,
+        "type": "freelance",
+        "img": "/images/xcl-screenshot.png",
+        "link": "https://www.xclmgt.com/"
+    },
+    {
+        "name": "Rebie's Bakery",
+        "id": 2,
+        "type": "freelance",
+        "img": "/images/rebies-screenshot.png",
+        "link": "https://www.rebies-bakery.com/"
+    },
+    {
+        "name": "Helayna Fuller Photography",
+        "id": 3,
+        "type": "freelance",
+        "img": "/images/hfphotos-screenshot.png",
+        "link": "https://www.helaynafullerphotography.com/"
+    }
+]

@@ -1,0 +1,45 @@
+.portfolio{
+    min-height: 110vh;
+    background: linear-gradient(180deg, white 25%, rgba(255, 255, 255, 0.25) 100%);
+}
+.portfolio > .container{
+    justify-self: center;
+    padding: 25px 5vw;
+    min-height: 100vh;
+    width: 100vw;
+    max-width: 1600px;
+    margin-bottom: 20vh;
+    margin-top: 100px;
+}
+.portfolio > .container > h1{
+    color: black;
+}
+.portfolio > .container > p{
+    color: var(--color1);
+    margin-left: 25px;
+    max-width: 750px;
+}
+.portfolio > .container > .projects{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 100px auto;
+    justify-content: start;
+}
+.projects > .project-card > img{
+    border-radius: 5px;
+    aspect-ratio: 3 / 2;
+    width: 100%;
+    max-width: 400px;
+}
+.projects > .project-card > h4{
+    margin: 0;
+    height: 25px;
+    align-content: center;
+}
+.projects > .project-card > a{
+    margin: 0;
+    height: 15px;
+    color: var(--color1);
+    text-decoration: none;
+}

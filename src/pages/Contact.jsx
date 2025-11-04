@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import ArrowIcon from '../components/icons/ArrowIcon'
 import '../styles/contact.css'
 
 export default function Contact(){
@@ -55,7 +56,6 @@ export default function Contact(){
             return
         }
         try {
-            //const response = await fetch("https://email.donovanheynen.com/", {
             const response = await fetch(API_URL, {
                 method: "POST",
                 headers: {
@@ -83,14 +83,13 @@ export default function Contact(){
 
     return(
         <div className="contact">
-            <h1>Get in Touch</h1>
-            <div className="main-card">
-                <p>Email me at <a href="mailto:heynen.donovan@gmail.com">heynen.donovan@gmail.com</a>, or send a message below.</p>
-                <form onSubmit={handleSubmit}>
+            <div className='container'>
+                <h1>Questions? Contact Me</h1>
+                <p>Looking to add a website to your growing business? Need a full-stack developer in your next project? Let me know how I can help you. Email me at heynen.donovan@gmail.com or fill out the form below.</p>
+                <form autoComplete="off" onSubmit={handleSubmit}>
                     <div>
                         <label htmlFor='name'>Name</label>
                         <input 
-                            placeholder='Name'
                             id='name'
                             name='name'
                             value={formData.name}
@@ -98,11 +97,10 @@ export default function Contact(){
                             onBlur={handleBlur}
                         />
                     </div>
-                    {errors.name && <p className='error'>{errors.name}</p>}
+                    <div className='break' />
                     <div>
                         <label htmlFor='email'>Email</label>
                         <input 
-                            placeholder='Email'
                             type='email'
                             id='email'
                             name='email'
@@ -111,21 +109,20 @@ export default function Contact(){
                             onBlur={handleBlur}
                         />
                     </div>
-                    {errors.email && <p className='error'>{errors.email}</p>}
+                    <div className='break' />
                     <div>
                         <label htmlFor='subject'>Subject</label>
                         <input 
-                            placeholder='Subject'
                             id='subject'
                             name='subject'
                             value={formData.subject}
                             onChange={handleChange}
                         />
                     </div>
+                    <div className='break' />
                     <div>
                         <label htmlFor='message'>Message</label>
                         <textarea 
-                            placeholder='Message'
                             id='message'
                             name='message'
                             value={formData.message}
@@ -133,13 +130,10 @@ export default function Contact(){
                             onBlur={handleBlur}
                         />
                     </div>
-                    {errors.message && <p className='error'>{errors.message}</p>}
-                    <div>
-                        <div></div>
-                        <button type='submit'>Send</button>
+                    <div className='break' />
+                    <div className='submit'>
+                        <button type='submit'>Send <ArrowIcon color={"#3550C8"}/></button>
                     </div>
-                    {/*submit && <p className='submit-msg'>Message sent.</p>*/}
-                    {/*submit === false ? <p className='submit-error'>Failed to send.</p>: ''*/}
                 </form>
             </div>
         </div>
