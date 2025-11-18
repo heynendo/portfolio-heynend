@@ -1,11 +1,19 @@
 import '../styles/portfolio.css'
 import projects from '../data/projects.json'
 import LinkIcon from '../components/icons/LinkIcon'
-import { useState } from 'react'
-import ArrowIcon from '../components/icons/ArrowIcon'
+import { useState, useEffect } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
 
 export default function Portfolio(){
+
+    const [width, setWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => setWidth(window.innerWidth);
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, [])
 
     const [filterOption, setFilterOption] = useState('freelance')
     const [popout, setPopout] = useState(null)
@@ -89,7 +97,7 @@ export default function Portfolio(){
                     {popout.link} <LinkIcon color='black'/>
                 </a>
             </div>
-            <video src={popout.video} 
+            <video src={width > 750 ? popout.video : popout.videoMobile} 
                 autoPlay
                 muted
                 loop

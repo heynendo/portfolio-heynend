@@ -243,10 +243,16 @@
         text-align: center;
     }
     .project-moreinfo{
-        width: 70vw;
+        width: 65vw;
     }
     .project-moreinfo > .tools{
-        bottom: 85px;
+        position: static;
+        margin-top: 15px;
+    }
+    .project-moreinfo > p{
+        font-size: 0.9em;
+        line-height: 18px;
+        padding: 5px;
     }
 }
 @media (max-width: 900px){
