@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import {useState, useEffect} from 'react'
+import {useLocation, useNavigate } from 'react-router-dom'
 import HandleNavigation from '../functions/HandleNavigation'
 import '../styles/navbar.css'
 import EmailIcon from './icons/EmailIcon'
@@ -9,7 +9,7 @@ import HomeIcon from './icons/HomeIcon'
 import AboutIcon from './icons/AboutIcon'
 import PortfolioIcon from './icons/PortfolioIcon'
 import ContactIcon from './icons/ContactIcon'
-import { style } from 'motion/react-client'
+import { AnimatePresence, motion } from 'motion/react'
 
 export default function NavBar() {
 
@@ -109,71 +109,82 @@ export default function NavBar() {
             </>
             }
         </header>
+        <AnimatePresence>
         {dropdown ? 
         <>
-            <div className='dropdown-menu'
-                style={{backgroundColor: color1}}
-            >
-                <nav>
-                    <div
-                        className={`link ${location.pathname === "/" ? "active" : ""}`}  
-                        onClick={() => {
-                            HandleNavigation(navigate,  "home", "/")
-                            setDropdown(false)
-                        }}
-                        style={{color: color2}}
-                    >
-                        <HomeIcon color={color2}/>
-                        Home
+                <motion.div className='dropdown-menu'
+                    style={{backgroundColor: color1}}
+                    initial={{ x: "100%" }}
+                    animate={{ x: 0 }}
+                    exit={{ x: "100%" }}
+                    transition={{ duration: 0.25, ease: "easeInOut" }}
+                >
+                    <nav>
+                        <div
+                            className={`link ${location.pathname === "/" ? "active" : ""}`}  
+                            onClick={() => {
+                                HandleNavigation(navigate,  "home", "/")
+                                setDropdown(false)
+                            }}
+                            style={{color: color2}}
+                        >
+                            <HomeIcon color={color2}/>
+                            Home
+                        </div>
+                        <div className='break' style={{backgroundColor: color2}}/>
+                        <div
+                            className={`link ${location.pathname === "/about" ? "active" : ""}`}  
+                            onClick={() => {
+                                HandleNavigation(navigate,  "about", "/about")
+                                setDropdown(false)
+                            }}
+                            style={{color: color2}}
+                        >
+                            <AboutIcon color={color2}/>
+                            About Me
+                        </div>
+                        <div className='break' style={{backgroundColor: color2}}/>
+                        <div
+                            className={`link ${location.pathname === "/portfolio" ? "active" : ""}`}  
+                            onClick={() => {
+                                HandleNavigation(navigate,  "portfolio", "/portfolio")
+                                setDropdown(false)
+                            }}
+                            style={{color: color2}}
+                        >
+                            <PortfolioIcon color={color2}/>
+                            Portfolio
+                        </div>
+                        <div className='break' style={{backgroundColor: color2}}/>
+                        <div
+                            className={`link ${location.pathname === "/contact" ? "active" : ""}`}  
+                            onClick={() => {
+                                HandleNavigation(navigate,  "contact", "/contact")
+                                setDropdown(false)
+                            }}
+                            style={{color: color2}}
+                        >
+                            <ContactIcon color={color2}/>
+                            Contact
+                        </div>
+                        <div className='break' style={{backgroundColor: color2}}/>
+                        
+                    </nav>
+                    <div className='contact-icons'>
+                        <a href="mailto:heynen.donovan@gmail.com"><EmailIcon color={color2}/></a>
+                        <a href='https://www.linkedin.com/in/donovanheynen/' target="_blank"><LinkedInIcon color={color2}/></a>
                     </div>
-                    <div className='break' style={{backgroundColor: color2}}/>
-                    <div
-                        className={`link ${location.pathname === "/about" ? "active" : ""}`}  
-                        onClick={() => {
-                            HandleNavigation(navigate,  "about", "/about")
-                            setDropdown(false)
-                        }}
-                        style={{color: color2}}
-                    >
-                        <AboutIcon color={color2}/>
-                        About Me
-                    </div>
-                    <div className='break' style={{backgroundColor: color2}}/>
-                    <div
-                        className={`link ${location.pathname === "/portfolio" ? "active" : ""}`}  
-                        onClick={() => {
-                            HandleNavigation(navigate,  "portfolio", "/portfolio")
-                            setDropdown(false)
-                        }}
-                        style={{color: color2}}
-                    >
-                        <PortfolioIcon color={color2}/>
-                        Portfolio
-                    </div>
-                    <div className='break' style={{backgroundColor: color2}}/>
-                    <div
-                        className={`link ${location.pathname === "/contact" ? "active" : ""}`}  
-                        onClick={() => {
-                            HandleNavigation(navigate,  "contact", "/contact")
-                            setDropdown(false)
-                        }}
-                        style={{color: color2}}
-                    >
-                        <ContactIcon color={color2}/>
-                        Contact
-                    </div>
-                    <div className='break' style={{backgroundColor: color2}}/>
-                    
-                </nav>
-                <div className='contact-icons'>
-                    <a href="mailto:heynen.donovan@gmail.com"><EmailIcon color={color2}/></a>
-                    <a href='https://www.linkedin.com/in/donovanheynen/' target="_blank"><LinkedInIcon color={color2}/></a>
-                </div>
-            </div>
-            <div className='dropdown-blur' onClick={() => setDropdown(x => !x)}/>
+                </motion.div>
+                <motion.div className='dropdown-blur' onClick={() => setDropdown(x => !x)}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.25}}
+                />
         </>
         :
         ''}
+        </AnimatePresence>
         </>
     )
 }

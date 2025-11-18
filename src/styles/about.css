@@ -1,21 +1,24 @@
 .about{
     width: 100vw;
     justify-self: end;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0.5) 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.05) 75%, #FFFFFF 100%);
+
 }
 .about > .content{
     justify-self: end;
     padding: 25px 5vw;
     padding-right: 0;
-    min-height: 95vh;
+    min-height: 105vh;
+    margin: 10vh 0;
     width: 100vw;
     max-width: 1800px;
-    margin: 15vh 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
-.about > .content > .headshot{
-    height: 500px;
+.about > .content > .aside-img{
+    height: 400px;
+    aspect-ratio: 1;
+    margin-top: 100px;
 }
 .about > .content > .body{
     text-align: start;
@@ -25,7 +28,7 @@
     color: white;
 }
 .about > .content > .body > p{
-    padding: 10px 15px;
+    padding: 5px 25px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 300;
@@ -81,6 +84,10 @@
 .about .body .skills{
     margin-left: 25px;
 }
+.about .body .skills > h3{
+    margin: 5px auto;
+    margin-top: 15px;
+}
 .about .body .skill-cards{
     display: flex;
     gap: 5px;
@@ -88,9 +95,9 @@
     margin-right: 25px;
 }
 .about .body .skill-cards > .skill-card{
-    width: 80px;
+    width: 75px;
     aspect-ratio: 1;
-    border:  solid white 2px;
+    border:  solid rgba(255, 255, 255, 0.75) 2px;
     border-radius: 5px;
     overflow: hidden;
 } 
@@ -98,14 +105,15 @@
     display: block;
     justify-self: center;
     margin: auto;
-    margin-top: 10px; 
+    margin-top: 5px;
+    height: 40px;
 }
 .skill-card > h4{
     margin: 0;
-    min-height: 30px;
+    min-height: 25px;
     width: 100%;
     font-weight: 900;
-    font-size: 0.9em;
+    font-size: 0.8em;
     line-height: 12px;
     align-content: center;
     text-align: center;
@@ -150,15 +158,24 @@
         padding: 0;
     }
     .about > .content > .body{
-        width: 95%;
+        width: 100%;
+        justify-content: center;
     }
     .about > .content > .body > p{
-        font-size: 0.85em;
+        padding: 0px 15px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 1em;
+        line-height: 19px;
+        color: #FFFFFF;
+        max-width: 850px;
+        width: 95%;
     }
 
     .about .body .skill-cards > .skill-card{
-        width: 70px;
-        aspect-ratio: 1;
+        width: 65px;
+        min-height: 60px;
         border:  solid white 2px;
         border-radius: 5px;
         overflow: hidden;
@@ -177,5 +194,15 @@
         text-align: center;
         color: #FFFFFF;
         overflow: hidden;
+    }
+    .education > .certifications{
+        display: block;
+    }
+    .education > .certifications > .cert-card > img{
+        width: 70vw;
+    }
+    .education > .certifications > .cert-card > h4{
+        width: 70vw;
+        margin-bottom: 15px;
     }
 }

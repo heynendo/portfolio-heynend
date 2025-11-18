@@ -4,20 +4,39 @@
         "id": 1,
         "type": "freelance",
         "img": "/images/xcl-screenshot.png",
-        "link": "https://www.xclmgt.com/"
+        "details": "Site built for a property management group in Orland Park, IL. Allows the property managers to show their locations and connect with current and future tenants.",
+        "link": "xclmgt.com",
+        "video": "/videos/xclmgt-demo.mp4",
+        "tools": ["HTML","CSS","Javascript","React.js","Cloudflare","Resend"]
     },
     {
         "name": "Rebie's Bakery",
         "id": 2,
         "type": "freelance",
         "img": "/images/rebies-screenshot.png",
-        "link": "https://www.rebies-bakery.com/"
+        "details": "Website for an independent bakery business. Space for the baker to show off their creations, while providing a menu and contact form for customers.",
+        "link": "rebies-bakery.com",
+        "video": "/videos/rebiesbakery-demo.mp4",
+        "tools": ["HTML","CSS","Javascript","React.js","Cloudflare","Resend"]
+    },
+    {
+        "name": "Git Repo Tracker",
+        "id": 3,
+        "type": "other",
+        "img": "/images/gitrepotracker-screenshot.png",
+        "details": "A React website built for developers that takes a public git URL and visualizes all commits, branches, and details from the repo. Allows users to download commit details in their preferred data format.",
+        "link": "git-repo-tracker.pages.dev",
+        "video": "/videos/gitrepotracker-demo.mp4",
+        "tools": ["HTML","CSS","Javascript","React.js","Cloudflare","Github API"]
     },
     {
         "name": "Helayna Fuller Photography",
-        "id": 3,
+        "id": 4,
         "type": "freelance",
         "img": "/images/hfphotos-screenshot.png",
-        "link": "https://www.helaynafullerphotography.com/"
+        "details": "A site for a freelance photographer to showcase their work and connect with future clients.",
+        "link": "helaynafullerphotography.com",
+        "video": "/videos/hfphotos-demo.mp4",
+        "tools": ["HTML","CSS","Javascript","React.js","Cloudflare","Resend"]
     }
 ]

@@ -8,7 +8,7 @@ import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar"
 
-import "./styles/index.css"; // your own styles
+import "./styles/index.css"
 
 const sections = [
   { id: "home", path: "/", component: <Home /> },

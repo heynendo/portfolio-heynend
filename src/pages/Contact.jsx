@@ -85,7 +85,7 @@ export default function Contact(){
         <div className="contact">
             <div className='container'>
                 <h1>Questions? Contact Me</h1>
-                <p>Looking to add a website to your growing business? Need a full-stack developer in your next project? Let me know how I can help you. Email me at heynen.donovan@gmail.com or fill out the form below.</p>
+                <p>Looking to add a website to your growing business? Need a full-stack developer in your next project? Let me know how I can help you. Email me at <a href="mailto:heynen.donovan@gmail.com">heynen.donovan@gmail.com</a> or fill out the form below.</p>
                 <form autoComplete="off" onSubmit={handleSubmit}>
                     <div>
                         <label htmlFor='name'>Name</label>
@@ -132,7 +132,7 @@ export default function Contact(){
                     </div>
                     <div className='break' />
                     <div className='submit'>
-                        <button type='submit'>Send <ArrowIcon color={"#3550C8"}/></button>
+                        <button type='submit'>Send <ArrowIcon color={"white"}/></button>
                     </div>
                 </form>
             </div>

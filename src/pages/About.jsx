@@ -3,6 +3,7 @@ import '../styles/about.css'
 import AboutNav from '../components/AboutNav'
 import skills from '../data/skills.json'
 import certificates from '../data/certificates.json'
+import { AnimatePresence, motion } from 'motion/react'
 
 export default function About(){
 
@@ -15,7 +16,7 @@ export default function About(){
         return () => window.removeEventListener('resize', handleResize)
     },[])
 
-    const [navContent, setNavContent] = useState("Skills")
+    const [navContent, setNavContent] = useState("Education")
 
     const frontendSkillCards = skills.frontend.map(skill => (
         <div className='skill-card' key={skill.name}>
@@ -45,17 +46,28 @@ export default function About(){
     return(
         <div className="about">
             <div className='content'>
-                {pageWidth > 750 ? <img className='headshot' src="/images/headshot.jpg"/> : ''}
+                {pageWidth > 750 ? <img className='aside-img' src="/images/aboutMe-img.png"/> : ''}
                 <div className='body'>
                     <h1>About Me</h1>
-                    <p>I'm Donovan Heynen, a full-stack web developer specializing in creating modern, mobile-responsive websites that help small and medium businesses establish and grow their online presence. Whether you need a professional site to showcase your services, an interactive platform to engage customers, or a custom solution built for your specific needs, I deliver reliable results that make it easy for people to find you and connect with your business.</p>
-                    <p>I handle the complete development process—from website design, domain setup and deployment, search engine optimization, and ongoing support—giving you a single partner for everything.</p>
+                    <p>
+                        Before becoming a web development, I spent years as a software engineer at Stellantis — building systems where precision and reliability weren't optional. That work, combined with my Computer Science degree, taught me how to approach problems systematically and never compromise on quality.
+                    </p>
+                    <p>
+                        Today, I use that background to help independent and small businesses succeed online. I handle everything from design and development to hosting and ongoing support. My focus is on creating sites that are not just beautiful, but built to perform and grow with your business.
+                    </p>
                     <AboutNav 
                         navContent={navContent} 
                         setNavContent={setNavContent}
                     />
+                    <AnimatePresence mode="wait">
                     {navContent === "Skills" ? 
-                    <div className='skills'>
+                    <motion.div className='skills'
+                        key="skills"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.25 }}
+                    >
                         <h3>Frontend</h3>
                         <div className='skill-cards'>
                             {frontendSkillCards}
@@ -68,17 +80,24 @@ export default function About(){
                         <div className='skill-cards'>
                             {moreSKillCards}
                         </div>
-                    </div>
+                    </motion.div>
                     :
-                    <div className='education'>
+                    <motion.div className='education'
+                        key="education"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.25 }}
+                    >
                         <h3>B.S. in Computer Science at Grand Valley State University (2022)</h3>
                         <span>Minors in Computer Engineering & Mathematics</span>
                         <h3>Certifications</h3>
                         <div className='certifications'>
                             {certs}
                         </div>
-                    </div>
+                    </motion.div>
                     }
+                    </AnimatePresence>
                 </div>
             </div>
         </div>

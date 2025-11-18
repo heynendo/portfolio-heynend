@@ -11,17 +11,23 @@ export default function Home(){
         <div className="home">
             <div className='content'>
                 <h2>Donovan Heynen</h2>
-                <h1 className='title'>Freelance Web Developer</h1>
+                <h1 className='title'>Web Developer & Software Engineer</h1>
                 <div className='main'>
-                    <div>
-                        add graphic with some highlights + hero text
-                    </div>
                     <img className='headshot' src="/images/headshot.jpg" />
-                </div>
-                <div className='learn-more' 
-                    onClick={() => {HandleNavigation(navigate, "about", "/about")}}
-                >
-                    learn more <ArrowIcon />
+                    <div>
+                        <p>
+                            Hi, I'm Donovan. 
+                        </p>
+                        <p>
+                            I create responsive, modern websites for businesses that want more than a template. Balancing technical expertise and creative thinking, I deliver solutions that look great and perform even better.
+                        </p>
+                        <div className='learn-more' onClick={() =>{
+                            HandleNavigation(navigate, "about", "/about")
+                        }}>
+                            learn more 
+                            <ArrowIcon color='black'/>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

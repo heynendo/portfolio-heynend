@@ -3,11 +3,11 @@
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.6) 100%);
 }
 .contact > .container{
-    min-height: 90vh;
+    min-height: 100vh;
+    margin-top: 15vh;
     width: 95%;
     justify-self: end;
     max-width: 1000px;
-    margin-top: 20vh;
 }
 @media (min-width: 900px){
     .contact > .container{
@@ -17,8 +17,16 @@
 }
 .contact > .container > p{
     color: white;
-    padding: 100px 50px;
-    padding-top: 25px;
+    padding: 50px;
+    padding-top: 15px;
+}
+.contact > .container > p > a{
+    text-decoration: none;
+    color: white;
+    transition: 0.2s;
+}
+.contact > .container > p > a:hover{
+    font-weight: 600;
 }
 .contact form > div{
     width: 100%;
@@ -60,6 +68,7 @@
     padding-left: 25px;
     font-weight: 400;
     color: white;
+    border-radius: 0;
 }
 .contact form > div > textarea{
     padding-top: 7.5px;
@@ -72,7 +81,7 @@
 }
 .contact form > div > input:focus,
 .contact form > div > textarea:focus{
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.75);
     color: var(--color1);
     
 }
@@ -102,21 +111,29 @@
     background-color: white;
     cursor: pointer;
     outline: none;
-    transition: background-color 0.2s;
-    border: solid #FFFFFF00 2px;
+    transition: 0.2s;
+    border: none;
+    border-bottom: solid white 2px;
+    background-color: #FFFFFF00;
+    color: white;
 }
 .contact form > .submit > button:hover,
 .contact form > .submit > button:focus{
     font-size: 1.1em;
-    border: solid black 2px;
+    border: solid white 2px;
+    background-color: #ffffff1a;
 }
 
 
 @media (max-width: 750px){
+    .contact > .container > h1{
+        margin-left: 2.5vw;
+    }
     .contact > .container > p{
         color: white;
-        padding: 50px 25px;
+        padding: 25px 25px;
         padding-top: 25px;
+        margin: 0 auto;
     }
     .contact form {
         width: 100%;
@@ -132,5 +149,10 @@
         font-size: 0.9em;
         line-height: 19px;
         padding-left: 15px;
+    }
+    .contact > .container{
+        margin: auto;
+        margin-top: 15vh;
+        width: 100%;
     }
 }
