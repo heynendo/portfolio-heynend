@@ -1,0 +1,76 @@
+{
+"frontend": [
+    {
+        "name": "HTML5",
+        "logo": "/images/logos/html.png"
+    },
+    {
+        "name": "CSS3",
+        "logo": "/images/logos/css.png"
+    },
+    {
+        "name": "Javascript",
+        "logo": "/images/logos/javascript.png"
+    },
+    {
+        "name": "ReactJS",
+        "logo": "/images/logos/react.png"
+    }
+],
+"backend": [
+    {
+        "name": "NodeJS",
+        "logo": "/images/logos/node.png"
+    },
+    {
+        "name": "ExpressJS",
+        "logo": "/images/logos/express.png"
+    },
+    {
+        "name": "MongoDB",
+        "logo": "/images/logos/mongodb.png"
+    },
+    {
+        "name": "Git",
+        "logo": "/images/logos/git.png"
+    },
+    {
+        "name": "CloudFlare",
+        "logo": "/images/logos/cloudflare.png"
+    },
+    {
+        "name": "Resend",
+        "logo": "/images/logos/resend.png"
+    },
+    {
+        "name": "Render",
+        "logo": "/images/logos/render.png"
+    }
+],
+"other": [
+    {
+        "name": "MATLAB",
+        "logo": "/images/logos/matlab.png"
+    },
+    {
+        "name": "Simulink",
+        "logo": "/images/logos/simulink.png"
+    },
+    {
+        "name": "dSPACE",
+        "logo": "/images/logos/dspace.png"
+    },
+    {
+        "name": "C",
+        "logo": "/images/logos/c.png"
+    },
+    {
+        "name": "Windows",
+        "logo": "/images/logos/windows.png"
+    },
+    {
+        "name": "Microsoft 365",
+        "logo": "/images/logos/windows.png"
+    }
+]
+}

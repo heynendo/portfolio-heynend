@@ -1,0 +1,46 @@
+[
+    {
+        "name": "XCL Property Management",
+        "id": 1,
+        "type": "freelance",
+        "img": "/images/xcl-screenshot.png",
+        "details": "Website for XCL Management showcasing their office properties across Orland Park, IL, with easy navigation for current and future tenants to explore locations and connect.",
+        "link": "xclmgt.com",
+        "video": "/videos/xclmgt-demo.mp4",
+        "videoMobile": "/videos/xclmgt-demoMobile.mp4",
+        "tools": ["HTML","CSS","Javascript","React.js","Cloudflare","Resend"]
+    },
+    {
+        "name": "Rebie's Bakery",
+        "id": 2,
+        "type": "freelance",
+        "img": "/images/rebies-screenshot.png",
+        "details": "Custom website for independent business Rebie's Bakery to display their creations, share the menu options, and connect with customers.",
+        "link": "rebies-bakery.com",
+        "video": "/videos/rebiesbakery-demo.mp4",
+        "videoMobile": "/videos/rebiesbakery-demoMobile.mp4",
+        "tools": ["HTML","CSS","Javascript","React.js","Cloudflare","Resend"]
+    },
+    {
+        "name": "Git Repo Tracker",
+        "id": 3,
+        "type": "other",
+        "img": "/images/gitrepotracker-screenshot.png",
+        "details": "A React website built for developers that takes a public git URL and visualizes all commits, branches, and details from the repo. Allows users to download commit details in their preferred data format.",
+        "link": "git-repo-tracker.pages.dev",
+        "video": "/videos/gitrepotracker-demo.mp4",
+        "videoMobile": "/videos/gitrepotracker-demo.mp4",
+        "tools": ["HTML","CSS","Javascript","React.js","Cloudflare","Github API"]
+    },
+    {
+        "name": "Helayna Fuller Photography",
+        "id": 4,
+        "type": "freelance",
+        "img": "/images/hfphotos-screenshot.png",
+        "details": "Portfolio site for freelance photographer Helayna Fuller to showcase her work and connect with prospective clients.",
+        "link": "helaynafullerphotography.com",
+        "video": "/videos/hfphotos-demo.mp4",
+        "videoMobile": "/videos/hfphotos-demoMobile.mp4",
+        "tools": ["HTML","CSS","Javascript","React.js","Cloudflare","Resend"]
+    }
+]

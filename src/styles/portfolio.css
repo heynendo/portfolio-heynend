@@ -1,0 +1,264 @@
+.portfolio{
+    min-height: 110vh;
+    background: linear-gradient(180deg, #FFFFFF 25%, rgba(255, 255, 255, 0.5) 75%, rgba(255, 255, 255, 0) 100%);
+}
+.portfolio > .container{
+    justify-self: center;
+    padding: 25px 5vw;
+    min-height: 100vh;
+    width: 100vw;
+    margin-top: 10vh;
+    max-width: 1600px;
+}
+.portfolio > .container > h1{
+    color: black;
+}
+.portfolio > .container > p{
+    color: black;
+    margin-left: 25px;
+    max-width: 750px;
+}
+.portfolio > .container > .filters{
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: solid var(--color1) 2px;
+    margin: 50px auto;
+    background-color: rgba(53, 80, 200, 0.05);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+}
+.portfolio > .container > .filters > span{
+    text-align: center;
+    align-content: center;
+    min-width: 125px;
+    height: 25px;
+    font-weight: 300;
+    font-size: 1em;
+    color: #000000;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.portfolio > .container > .filters > span:hover{
+    opacity: 0.75;
+}
+.portfolio > .container > .filters > span.selected{
+    opacity: 1;
+    font-weight: 500;
+    cursor: default;
+}
+.container > .projects {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-around;
+    overflow-y: hidden;
+}
+.projects > .project-card{
+    border: solid #ffffff00 2px;
+    border-radius: 5px;
+    transition: 0.5s;
+    text-decoration: none;
+    width: 100%;
+    margin-bottom: 25px;
+}
+.projects > .project-card:hover{
+    background-color: white;
+    border: solid white 2px;
+}
+.projects > .project-card .image-wrapper{
+    display: grid;
+    text-decoration: none;
+}
+.projects > .project-card .image-wrapper > .image-overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1px);
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    z-index: 1;
+    opacity: 0;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.projects > .project-card .image-wrapper > .image-overlay > span{
+    display: block;
+    height: 100%;
+    align-content: center;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.35em;
+    color: rgba(255, 255, 255, 0.9);
+}
+.projects > .project-card .image-wrapper > .image-overlay:hover{
+    opacity: 1;
+}
+.projects > .project-card .image-wrapper > img{
+    border-radius: 5px;
+    aspect-ratio: 3 / 2;
+    width: 100%;
+    transition: 0.2s;
+    cursor: default;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    z-index: 0;
+}
+.projects > .project-card:hover .image-wrapper > img{
+    border-radius: 0;
+}
+.projects > .project-card > h4{
+    margin: 0;
+    min-height: 30px;
+    align-content: center;
+    color: black;
+    padding-left: 5px;
+}
+.projects > .project-card > .site-link{
+    min-height: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.9em;
+    color: #3550C8;
+    padding-left: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 0;
+    transition: 0.5s;
+}
+.projects > .project-card:hover > .site-link{
+    opacity: 1;
+}
+.background-blur{
+    position: fixed;
+    width: 45vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 2;
+}
+.background-blur > span{
+    display: block;
+    text-align: center;
+    height: 100%;
+    align-content: center;
+    color: white;
+    opacity: 0;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 1.5em;
+    letter-spacing: 4px;
+}
+.background-blur > span:hover{
+    opacity: 0.5;
+}
+.project-moreinfo{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 55vw;
+    height: 100vh;
+    background: var(--color1);
+    z-index: 3;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.project-moreinfo > .head{
+    display: flex;
+    flex-direction: row;
+    min-height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+.project-moreinfo > .head > h4{
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #FFFFFF;
+    margin: 0;
+}
+.project-moreinfo > .head > svg{
+    scale: 1.5;
+    rotate: 180deg;
+    cursor: pointer;
+}
+.project-moreinfo .head > .website-link{
+    display: block;
+    text-align: center;
+    font-size: 0.9em;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.project-moreinfo .head > .website-link:hover{
+    scale: 1.025;
+}
+.project-moreinfo .head > .website-link > svg{
+    scale: 1.1;
+}
+.project-moreinfo > video{
+    width: 100%;
+}
+.project-moreinfo > p{
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 19px;
+    padding: 10px 25px;
+    margin: 0;
+}
+.project-moreinfo > .tools{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    padding-left: 15px;
+    position: absolute;
+    bottom: 50px;
+}
+.project-moreinfo > .tools > .tool{
+    border: solid rgba(255, 255, 255, 0.9) 2px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+    font-size: 0.85em;
+    padding: 1px 15px;
+}
+@media (max-width: 750px){
+    .portfolio > .container > .filters{
+        margin: 40px auto;
+        justify-content: space-between;
+    }
+    .portfolio > .container > .filters > span{
+        min-width: 100px;
+        width: auto;
+        font-size: 0.85em;
+    }
+    .container > .projects {
+        display: grid;
+        grid-template-columns: 48% 48%;
+        justify-content: space-around;
+        overflow-y: hidden;
+        text-align: center;
+    }
+    .project-moreinfo{
+        width: 65vw;
+    }
+    .project-moreinfo > .tools{
+        position: static;
+        margin-top: 15px;
+    }
+    .project-moreinfo > p{
+        font-size: 0.9em;
+        line-height: 18px;
+        padding: 5px;
+    }
+}
+@media (max-width: 900px){
+    .project-moreinfo > .head{
+        flex-direction: column;
+        justify-content: center;
+        min-height: 60px;
+    }
+}
