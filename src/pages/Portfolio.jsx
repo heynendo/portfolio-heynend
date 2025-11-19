@@ -3,6 +3,8 @@ import projects from '../data/projects.json'
 import LinkIcon from '../components/icons/LinkIcon'
 import { useState, useEffect } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
+import { MoonLoader } from 'react-spinners'
+import { video } from 'motion/react-client'
 
 export default function Portfolio(){
 
@@ -17,6 +19,13 @@ export default function Portfolio(){
 
     const [filterOption, setFilterOption] = useState('freelance')
     const [popout, setPopout] = useState(null)
+    const [videoLoaded, setVideoLoaded] = useState(false)
+
+    useEffect(() => {
+        if (popout !== null){
+            setVideoLoaded(false)
+        }
+    }, [popout])
 
     const projectCards = projects
         .sort((a,b) => a.id - b.id)
@@ -97,12 +106,34 @@ export default function Portfolio(){
                     {popout.link} <LinkIcon color='black'/>
                 </a>
             </div>
-            <video src={width > 750 ? popout.video : popout.videoMobile} 
+            <motion.video src={width > 750 ? popout.video : popout.videoMobile} 
                 autoPlay
                 muted
                 loop
                 playsInline
+                onCanPlay={() => setVideoLoaded(true)}
+                className={videoLoaded ? 'show-video' : 'hide-video'}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: videoLoaded ? 1 : 0 }}
+                transition={{ duration: 0.25, delay: videoLoaded ? 0.25 : 0 }}
             />
+            <AnimatePresence mode="wait">
+            {videoLoaded === false &&
+            <div className='loading'
+                initial={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.25 }}
+            >
+                <p>Video loading...</p>
+                <MoonLoader 
+                    size={75}
+                    color='white'
+                    speedMultiplier={0.65}
+                    className='moon-loader'
+                />   
+            </div>
+            }
+            </AnimatePresence>
             <p>{popout.details}</p>
             <div className='tools'>
                 {popout.tools.map(tool => 
