@@ -199,8 +199,19 @@
 .project-moreinfo .head > .website-link > svg{
     scale: 1.1;
 }
-.project-moreinfo > video{
+.project-moreinfo > .show-video{
+    display: block;
     width: 100%;
+}
+.project-moreinfo > .hide-video{
+    display: none;
+}
+.project-moreinfo > .loading{
+    justify-self: center;
+    overflow-y: hidden;
+    min-height: 45vh;
+    align-content: center;
+    color: white;
 }
 .project-moreinfo > p{
     font-weight: 300;
