@@ -33,8 +33,19 @@
         "tools": ["HTML","CSS","Javascript","React.js","Cloudflare","Github API"]
     },
     {
-        "name": "Helayna Fuller Photography",
+        "name": "Schedule System",
         "id": 4,
+        "type": "other",
+        "img": "/images/schedulesystem-screenshot.png",
+        "details": "A full-stack appointment scheduling application with role-based authentication, availability management, and real-time appointment booking.",
+        "link": "scheduling-tool-21o.pages.dev",
+        "video": "/videos/schedulesystem-demo.mp4",
+        "videoMobile": "/videos/schedulesystem-demoMobile.mp4",
+        "tools": ["HTML","CSS","Javascript","React.js","Express.js","MongoDB","Cloudflare","Render"]
+    },
+    {
+        "name": "Helayna Fuller Photography",
+        "id": 5,
         "type": "freelance",
         "img": "/images/hfphotos-screenshot.png",
         "details": "Portfolio site for freelance photographer Helayna Fuller to showcase her work and connect with prospective clients.",

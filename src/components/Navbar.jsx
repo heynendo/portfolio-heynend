@@ -131,7 +131,7 @@ export default function NavBar() {
                             <HomeIcon color={color2}/>
                             Home
                         </div>
-                        <div className='break' style={{backgroundColor: color2}}/>
+                        <div className='break' style={{borderColor: color2}}/>
                         <div
                             className={`link ${location.pathname === "/about" ? "active" : ""}`}  
                             onClick={() => {
@@ -143,7 +143,7 @@ export default function NavBar() {
                             <AboutIcon color={color2}/>
                             About Me
                         </div>
-                        <div className='break' style={{backgroundColor: color2}}/>
+                        <div className='break' style={{borderColor: color2}}/>
                         <div
                             className={`link ${location.pathname === "/portfolio" ? "active" : ""}`}  
                             onClick={() => {
@@ -155,7 +155,7 @@ export default function NavBar() {
                             <PortfolioIcon color={color2}/>
                             Portfolio
                         </div>
-                        <div className='break' style={{backgroundColor: color2}}/>
+                        <div className='break' style={{borderColor: color2}}/>
                         <div
                             className={`link ${location.pathname === "/contact" ? "active" : ""}`}  
                             onClick={() => {
@@ -167,7 +167,7 @@ export default function NavBar() {
                             <ContactIcon color={color2}/>
                             Contact
                         </div>
-                        <div className='break' style={{backgroundColor: color2}}/>
+                        <div className='break' style={{borderColor: color2}}/>
                         
                     </nav>
                     <div className='contact-icons'>
