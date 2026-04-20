@@ -119,6 +119,9 @@
     }
 }
 @media (max-width: 750px){
+    .service-list{
+        margin-top: 25px;
+    }
     .card{
         width: 85vw;
     }

@@ -16,7 +16,7 @@
 }
 .project-info > .main > .project-title{
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
     width: 100%;
     padding-left: 25px;
@@ -182,7 +182,11 @@
     .project-info{
         min-height: 600px;
     }
-
+}
+@media (max-width: 850px){
+    .project-info > .main > .project-title{
+        justify-content: space-between;
+    }
 }
 @media (max-width: 500px){
     .project-info > .main > .slideshow > .image-selector > .option{

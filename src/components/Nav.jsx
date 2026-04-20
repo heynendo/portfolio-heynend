@@ -137,7 +137,9 @@ export default function Nav(){
                                 <EmailLogo />
                             </button>
                             <a className="linkedin link"
-                                
+                                href="https://www.linkedin.com/in/donovanheynen/"
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 linkedin
                                 <LinkedinLogo />

@@ -3,6 +3,10 @@ import { AnimatePresence } from "motion/react"
 import PopoutWindow from "./PopoutWindow"
 import '../style/contact-form.css'
 
+const API_URL = import.meta.env.DEV
+    ? "http://localhost:8787/"
+    : "https://emailserver-resend.heynen-donovan.workers.dev/"
+
 const validate = (values) => {
     const errors = {}
     if (!values.name || values.name.trim().length < 5)
@@ -33,9 +37,30 @@ export default function ContactForm() {
             setPopout("error")
             return
         }
-        // TODO: send to Resend server
-        setValues({ name: "", email: "", message: "" })
-        setPopout("success")
+        try {
+            const response = await fetch(API_URL, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    site: "donovanheynen",
+                    ...values
+                }),
+            })
+
+            if (!response.ok) {
+                throw new Error(await response.text())
+            }
+
+            // success
+            setValues({ name: "", email: "", message: "" })
+            setPopout("success")
+
+        } catch (err) {
+            console.error("Error submitting form:", err)
+            setPopout("api-error")
+        }
     }
 
     const errorList = Object.values(errors).filter(Boolean)
@@ -88,6 +113,18 @@ export default function ContactForm() {
                         classname="contact-popout"
                     >
                         <p>Thanks for reaching out! I'll get back to you as soon as I can.</p>
+                        <button className="close" onClick={() => setPopout(null)}>close</button>
+                    </PopoutWindow>
+                }
+                {popout === "api-error" &&
+                    <PopoutWindow
+                        title="Something went wrong"
+                        onClose={() => setPopout(null)}
+                        classname="contact-popout"
+                    >
+                        <p>
+                            There was an issue sending your message. Please try again.
+                        </p>
                         <button className="close" onClick={() => setPopout(null)}>close</button>
                     </PopoutWindow>
                 }

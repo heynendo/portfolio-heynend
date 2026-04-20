@@ -48,9 +48,6 @@
     transition: 0.1s;
     flex-shrink: 0;
 }
-.home > .body .intro > .logo:hover{
-    scale: 1.05;
-}
 .home > .body .intro > .break{
     width: 10px;
     height: 250px;
@@ -104,5 +101,8 @@
     .home > .body .intro > .break{
         width: 5px;
         height: 200px;
+    }
+    .home > .body .services > h2.gradient{
+        font-size: 3em;
     }
 }

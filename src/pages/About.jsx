@@ -34,6 +34,8 @@ export default function About(){
                             </button>
                             <a className="link linkedin"
                                 href="https://www.linkedin.com/in/donovanheynen/"
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 linkedin
                                 <LinkedinIcon color="#EBEBFF" />
