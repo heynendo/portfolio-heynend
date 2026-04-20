@@ -1,0 +1,52 @@
+.contact > .hero .cta{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    gap: 15%;
+    margin: 25px;
+    margin-top: 100px;
+}
+.contact > .hero .cta > button{
+    padding: 0 50px;
+    margin: 5px;
+    gap: 25px;
+}
+.contact > .hero .cta > button:hover{
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+.contact > .hero .cta > h3{
+    color: var(--color3);
+}
+
+@media (max-width: 750px){
+    .contact > .hero{
+        min-height: 300px;
+    }
+    .contact > .hero > .container{
+        align-items: center;
+    }
+    .contact > .hero > .container > h1{
+        text-align: center;
+    }
+    .contact > .hero .cta{
+        flex-direction: column;
+        gap: 15px;
+        width: 90vw;
+        margin: auto;
+        margin-bottom: 15px;
+        margin-top: 25px;
+    }
+    .contact > .hero .cta{
+        line-height: 100%;
+        text-align: center;
+    }
+    .contact > .hero .cta > button{
+        width: 60vw;
+        justify-content: center;
+    }
+    .contact > .body{
+        padding: 25px 0;
+        min-height: 500px;
+    }
+}

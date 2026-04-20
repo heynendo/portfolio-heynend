@@ -1,0 +1,120 @@
+.portfolio > .hero .cta > span{
+    display: block;
+    margin: 75px;
+    margin-bottom: 50px;
+    justify-self: start;
+    max-width: 1200px;
+}
+.portfolio > .body{
+    padding: 0;
+}
+.portfolio > .body > .container{
+    display: flex;
+    gap: 50px;
+}
+.portfolio > .body .main-break{
+    width: 5px;
+    height: 500px;
+    background-color: var(--color2);
+    opacity: 0.75;
+}
+.portfolio > .body .project-selector{
+    width: 250px;
+    flex-shrink: 0;
+}
+.portfolio > .body .project-selector .head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    margin: 25px 15px;
+    margin-bottom: 50px;
+}
+.portfolio > .body .project-selector .head > h3{
+    height: 30px;
+    font-weight: 600;
+    font-size: 1.5em;
+    line-height: 120%;
+    letter-spacing: -0.05em;
+    opacity: 0.75;
+}
+.portfolio > .body .project-selector .head > .options,
+.portfolio > .body .project-selector .head > .back{
+    background-color: transparent;
+    border: solid 3px var(--color2);
+    opacity: 0.75;
+    transition: 0.2s;
+    min-height: 30px;
+    width: 50px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.portfolio > .body .project-selector .head > .options:hover,
+.portfolio > .body .project-selector .head > .back:hover{
+    opacity: 1;
+}
+.portfolio > .body .project-selector .projects,
+.portfolio > .body .project-selector .projects > .list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.portfolio > .body .project-selector .projects > .list > h3{
+    margin: 10px 15px;
+    align-content: center;
+    opacity: 0.75;
+}
+.portfolio > .body .project-selector .card{
+    height: 35px;
+    width: 250px;
+    justify-content: end;
+    font-weight: 600;
+    opacity: 0.75;
+    transition: 0.2s opacity, 0.2s color, 0.2s padding;
+}
+.portfolio > .body .project-selector .card.selected{
+    opacity: 1;
+    font-weight: 900;
+    color: var(--color3);
+    background: var(--color2-gradient);
+}
+.portfolio > .body .project-selector  .card:hover{
+    opacity: 1;
+    padding-right: 20px;
+}
+.portfolio > .body .project-selector .head > .exit-menu{
+    background-color: transparent;
+    border: solid var(--color2) 2px;
+    padding: 0 15px;
+    opacity: 0.75;
+}
+.portfolio > .body .project-selector .head > .exit-menu:hover{
+    opacity: 1;
+}
+@media (max-width: 850px){
+    .portfolio > .body .project-selector{
+        width: 100%;
+    }
+    .portfolio > .body .project-selector > .container{
+        margin: auto;
+    }
+    .portfolio > .body .project-selector > .container > .head{
+        justify-self: end;
+        max-width: 450px;
+        width: 80%;
+        margin: 35px auto;
+        margin-right: 15px;
+    }
+    .portfolio > .body .project-selector > .container > .projects{
+        justify-self: end;
+        width: 90%;
+        max-width: 500px;
+        margin: auto;
+        margin-top: 50px;
+        margin-right: 0;
+    }
+    .portfolio > .body .project-selector .card{
+        width: 100%;
+    }
+}

@@ -1,0 +1,19 @@
+.resume-options > .main-options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    gap: 15px;
+    width: 85%;
+    margin: 25px 0;
+}
+.resume-options > .main-options > .card-2{
+    width: 100%;
+    font-size: 1em;
+}
+
+@media (max-width: 400px){
+    .resume-options > .main-options{
+        width: 100%;
+    }
+}

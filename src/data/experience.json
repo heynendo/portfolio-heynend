@@ -1,0 +1,23 @@
+[
+    {
+        "company": "Huntington Learning Center",
+        "title": "Math & ACT Tutor",
+        "date": "November 2025 - Present",
+        "info": ["Tutor K-12 students in mathematics and ACT prep. Reinforce critical thinking and test-taking strategies to build student confidence and academic independence."],
+        "img": "/logos/huntington.png"
+    },
+    {
+        "company": "",
+        "title": "Freelance Web Developer",
+        "date": "June 2025 - Present",
+        "info": ["Develop and deploy responsive React/Node web apps for small businesses, enhancing their online visibility and user engagement.", "Manage the full development lifecycle from design, domain setup and deployment, API integration, custom email services, SEO, and ongoing client support."],
+        "img": "/logos/freelanceLogo.png"
+    },
+    {
+        "company": "Stellantis FCA",
+        "title": "Automotive Software Engineer",
+        "date": "May 2022 - November 2024",
+        "info": ["Interned as a Plant Model Engineer, creating logic and electrical signal networks for vehicle prototype models using MATLAB Simulink, enabling virtual simulation testing of vehicles before production.", "Automated key plant model processes, reducing manual workload and error rates by over 50%.", "Managed CI/CD pipeline debugging and deployment of high-priority HIL/SIL project builds, improving platform stability and accelerated delivery."],
+        "img": "/logos/stellantis.png"
+    }
+]

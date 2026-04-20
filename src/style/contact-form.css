@@ -1,0 +1,105 @@
+.contact-form{
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% - 50px);
+    max-width: 1400px;
+    gap: 25px;
+    justify-content: center;
+    justify-self: end;
+    margin-right: 50px;
+}
+.contact-form > input,
+.contact-form > textarea{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1em;
+    letter-spacing: -0.05em;
+    color: var(--color1);
+    background-color: var(--color2);
+    border: none;
+    outline: none;
+    padding: 15px;
+    border-bottom: solid 5px transparent;
+    border-top: solid 5px transparent;
+    transition: 0.2s opacity, 1s border-bottom;
+    opacity: 0.9;
+}
+.contact-form > input:hover,
+.contact-form > textarea:hover{
+    opacity: 1;
+}
+.contact-form > input::placeholder,
+.contact-form > textarea::placeholder{
+    color: var(--color1);
+    opacity: 0.5;
+}
+.contact-form > input{
+    min-height: 50px;
+    padding: 0 15px;
+    width: calc(50% - 12.5px);
+}
+.contact-form > textarea{
+    min-height: 200px;
+    width: 100%;
+    resize: vertical;
+}
+.contact-form > input:focus,
+.contact-form > textarea:focus{
+    opacity: 1;
+    border-bottom: solid 5px var(--color3);
+}
+.contact-form > button{
+    width: 40%;
+    max-width: 300px;
+    background-color: transparent;
+    color: var(--color2);
+    border: solid 3px var(--color2);
+    font-weight: 500;
+    justify-content: center;
+    opacity: 0.9;
+}
+.contact-form > button:hover,
+.contact-form > button:focus{
+    background-color: var(--color2);
+    color: var(--color1);
+    outline: none;
+    opacity: 1;
+}
+.contact-form > .error{
+    border-bottom: solid 5px rgb(206, 0, 0);
+}
+.contact-popout ul{
+    min-height: 125px;
+    align-content: center;
+    padding: 0;
+}
+.contact-popout ul > li{
+    margin-bottom: 10px;
+    color: var(--color1);
+    font-size: 1em;
+    font-weight: 400;
+    padding: 0 15px;
+}
+.contact-popout p{
+    color: var(--color1);
+    min-height: 125px;
+    align-content: center;
+    font-size: 1em;
+    font-weight: 400;
+    padding: 0 15px;
+}
+@media (max-width: 750px){
+    .contact-form{
+        flex-direction: column;
+        margin: auto;
+    }
+    .contact-form > textarea, 
+    .contact-form > input{
+        width: 100%;
+    }
+    .contact-form > button{
+        width: 75%;
+        align-self: center;
+    }
+}

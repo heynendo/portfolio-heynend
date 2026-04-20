@@ -1,35 +1,41 @@
-import { Link, useNavigate } from 'react-router-dom'
-import '../styles/home.css'
-import ArrowIcon from '../components/icons/ArrowIcon'
-import HandleNavigation from '../functions/HandleNavigation'
+import '../style/home.css'
+import ServiceList from '../components/ServiceList'
+import HeroSection from '../components/HeroSection'
+import BodySection from '../components/BodySection'
+import LowerSection from '../components/LowerSection'
+import DHLogo from '../icons/DHLogo'
+import { useNavigate } from 'react-router-dom'
+import ScrollToTop from '../functions/ScrollToTop'
 
 export default function Home(){
 
     const navigate = useNavigate()
 
     return(
-        <div className="home">
-            <div className='content'>
-                <h2>Donovan Heynen</h2>
-                <h1 className='title'>Web Developer & Software Engineer</h1>
-                <div className='main'>
-                    <img className='headshot' src="/images/headshot.jpg" />
-                    <div>
-                        <p>
-                            Hi, I'm Donovan. 
-                        </p>
-                        <p>
-                            I create responsive, modern websites for businesses that want more than a template. Balancing technical expertise and creative thinking, I deliver solutions that look great and perform even better.
-                        </p>
-                        <div className='learn-more' onClick={() =>{
-                            HandleNavigation(navigate, "about", "/about")
-                        }}>
-                            learn more 
-                            <ArrowIcon color='black'/>
-                        </div>
-                    </div>
+        <main className="home">
+            <HeroSection direction='right'>
+                <h1 className="bold">Web Design and Development <span>that works for you.</span></h1>
+                <div className='cta-buttons'>
+                    <button className='lg' onClick={() => navigate('/portfolio')}>Portfolio</button>
+                    <button className='lg contact' onClick={() => navigate('/contact')}>Contact</button>
                 </div>
-            </div>
-        </div>
+            </HeroSection>
+            <BodySection direction="right">
+                <div className='intro'>
+                    <DHLogo className="logo" />
+                    <div className='break'/>
+                    <p className='bold'>
+                        I build dependable, production-ready web applications from the ground up, working with clients through every stage of the process — from initial design to final deployment — making sure nothing gets lost along the way. I care about the details: clean code, thoughtful UI, and sites that hold up over time.
+                    </p>
+                </div>
+                <div className='services'>
+                    <h2 className='gradient'>Services</h2>
+                    <ServiceList />
+                </div>
+            </BodySection>
+            <LowerSection direction='right'>
+
+            </LowerSection>
+        </main>
     )
 }

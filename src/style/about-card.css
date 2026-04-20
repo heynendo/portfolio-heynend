@@ -1,0 +1,95 @@
+.about-card{
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+    gap: 25px;
+}
+.about-card > img{
+    width: 100px;
+    flex-shrink: 0;
+}
+.about-card > .container > .head{
+    display: flex;
+    align-items: center;
+    min-height: 55px;
+    flex-wrap: wrap;
+}
+.about-card > .container > .head > .title{
+    font-weight: 800;
+    font-size: 1.5em;
+    line-height: 120%;
+    letter-spacing: -0.05em;
+}
+.about-card > .container > .head > .secondary{
+    font-weight: 600;
+    font-size: 1.5em;
+    line-height: 120%;
+    letter-spacing: -0.05em;
+}
+.about-card > .container > .head > .date{
+    border: solid 3px var(--color2);
+    border-radius: 100px;
+    color: var(--color2);
+    padding: 0 25px;
+    height: 35px;
+    font-size: 1em;
+    align-content: center;
+    margin-left: 25px;
+}
+.about-card > .container > .info{
+    display: flex;
+    flex-direction: column;
+    gap: 7.5px;
+    margin-top: 10px;
+}
+.about-card > .container > .info > p{
+    margin: 0;
+    margin-left: 25px;
+    max-width: 65%;
+}
+
+
+@media (max-width: 900px){
+    
+    .about-card > .container > .head{
+        flex-direction: column;
+        align-items: start;
+        gap: 2.5px;
+    }
+    .about-card > .container > .head > .date{
+        border-width: 2px;
+        color: var(--color2);
+        padding: 0 15px;
+        height: 25px;
+        font-size: 0.9em;
+    }
+    .about-card > .container > .info > p{
+        max-width: 100%;
+    }
+}
+@media (max-width: 750px){
+    .about-card{
+        display: block;
+    }
+    .about-card > .container{
+        display: flex;
+        gap: 15px;
+    }
+    .about-card > .container > img{
+        width: 60px;
+        flex-shrink: 0;
+        align-self: center;
+    }
+    .about-card > .container > .head > .title{
+        font-size: 1.25em;
+    }
+    .about-card > .container > .head > .secondary{
+        font-size: 1.1em;
+    }
+    .about-card > .container > .head > .date{
+        margin-top: 5px;
+        margin-left: 15px;
+    }.about-card > .info > p{
+        margin: 10px;
+    }
+}

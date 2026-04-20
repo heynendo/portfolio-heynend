@@ -1,0 +1,39 @@
+.popout > .blur{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(38, 38, 41, 0.5);
+    backdrop-filter: blur(25px);
+    z-index: 10;
+}
+.popout > .window{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    max-width: 95vw;
+    background-color: var(--color2);
+    min-height: 300px;
+    z-index: 11;
+    padding: 25px;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+.popout > .window > .title{
+    color: var(--color3);
+    min-height: 50px;
+    font-size: 2.25em;
+    line-height: 85%;
+    overflow: hidden;
+}
+.close{
+    background: none;
+    width: 100%;
+    color: var(--color1);
+    justify-content: center;
+}
+.close:hover{
+    font-size: 1.35em;
+}
