@@ -1,0 +1,108 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    width: 100vw;
+    justify-self: end;
+}
+.home > .hero h1{
+    max-width: 800px;
+    margin-left: 25px;
+}
+.home > .hero .cta-buttons{
+    display: flex;
+    gap: 50px;
+    justify-content: end;
+    margin: 50px 10vw;
+    margin-top: 75px;
+}
+.home > .hero .cta-buttons > button{
+    transition: 0.2s ease-in;
+    margin: 5px;
+    justify-content: center;
+}
+.home > .hero .cta-buttons > button:hover{
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+.home > .hero .cta-buttons > .contact{
+    background-color: var(--color1);
+}
+.home > .body .intro{
+    display: flex;
+    gap: 25px;
+    min-height: 250px;
+    align-items: center;
+    margin-right: 25px;
+    margin-bottom: 75px;
+}
+.home > .body .intro > .headshot{
+    background-color: var(--color2);
+    height: 250px;
+    width: 250px;
+    flex-shrink: 0;
+}
+.home > .body .intro > .logo{
+    width: 225px;
+    height: 225px;
+    transition: 0.1s;
+    flex-shrink: 0;
+}
+.home > .body .intro > .logo:hover{
+    scale: 1.05;
+}
+.home > .body .intro > .break{
+    width: 10px;
+    height: 250px;
+    background-color: var(--color2);
+    flex-shrink: 0;
+}
+.home > .body .intro > p{
+    max-width: 1200px;
+}
+.home > .body .services{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: visible;
+}
+.home > .body .services > h2.gradient{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 4.5em;
+    text-align: center;
+    letter-spacing: -0.05em;
+    opacity: 0.9;
+}
+
+@media (max-width: 750px){
+    .home > .hero .cta-buttons{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin: 25px 10vw;
+        width: 100%;
+    }
+    .home > .hero .cta-buttons button{
+        width: 65vw;
+    }
+    .home > .hero h1{
+        max-width: 350px;
+        margin: 0;
+    }
+    .home > .body .intro{
+        gap: 15px;
+        min-height: 150px;
+        margin-right: 0px;
+        margin-bottom: 50px;
+    }
+    .home > .body .intro > .logo{
+        width: 75px;
+        height: 75px;
+    }
+    .home > .body .intro > .break{
+        width: 5px;
+        height: 200px;
+    }
+}

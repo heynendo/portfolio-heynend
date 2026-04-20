@@ -1,0 +1,23 @@
+[
+    {
+        "company": "Grand Valley State University",
+        "title": "Bachelors of Science Degree",
+        "date": "December 2022",
+        "info": ["Major in Computer Science", "Minors in Computer Engineer & Mathematics"],
+        "img": "/logos/gvsu.png"
+    },
+    {
+        "company": "Meta (Coursera Certification)",
+        "title": "Front-End Developer",
+        "date": "January 2025",
+        "info": ["9-course program to prepare learners for an entry-level career as a front-end developer. Covers HTML, CSS, JS, React, UI/UX, and more."],
+        "img": "/logos/meta.png"
+    },
+    {
+        "company": "Scrimba (Coursera Certification)",
+        "title": "Professional React Developer",
+        "date": "May 2025",
+        "info": ["5-course React specialization program covering everything from foundational principles to advanced concepts and practical challenges."],
+        "img": "/logos/scrimba.png"
+    }
+]

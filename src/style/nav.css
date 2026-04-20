@@ -1,0 +1,169 @@
+header{
+    height: 100px;
+    display: flex;
+    justify-self: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding: 0 50px;
+    position: fixed;
+    background-color: var(--color2);
+    transition: height 0.4s, box-shadow 0.4s, background-color 0.8s;
+    z-index: 4;
+}
+header.scrolled{
+    height: 65px;
+    background-color: rgba(235, 235, 255, 0.2);
+    backdrop-filter: blur(50px);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+}
+header .hamburger{
+    background-color: var(--color1);
+}
+header > .name{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+header > .name > .first{
+    color: var(--color3);
+    padding-right: 0;
+}
+header > .right{
+    display: flex;
+    gap: 15px;
+}
+header > .right > button{
+    transition: 0.15s;
+    margin: 5px;
+}
+header > .right > button:hover{
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+.nav-open{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    z-index: 5;
+}
+.nav-open > .blur{
+    background: rgba(38, 38, 41, 0.5);
+    backdrop-filter: blur(25px);
+    width: calc(100vw - 400px);
+}
+.nav-open > .menu{
+    height: 100%;
+    width: 400px;
+    background-color: var(--color1);
+    box-shadow: -5px 0px 5px rgba(0, 0, 0, 0.25);
+    z-index: 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 25px;
+    padding-top: 25px;
+}
+.nav-open > .menu nav{
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: end;
+}
+nav > .card{
+    width: 325px;
+}
+nav > .card > h3{
+    transition: 0.2s;
+}
+nav > .card:hover > h3{
+    padding-left: 15px;
+}
+nav > .break{
+    height: 5px;
+    width: 325px;
+    background-color: var(--color2);
+}
+nav > .social-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    width: 325px;
+}
+nav > .social-buttons > button,
+nav > .social-buttons > a{
+    padding: 5px 10px;
+    font-size: 1.25em;
+    gap: 15px;
+}
+nav > .social-buttons > a.linkedin{
+    background-color: transparent;
+    border: solid 4px var(--color2);
+    color: var(--color2);
+}
+nav > .social-buttons > a.linkedin:hover{
+    background-color: var(--color2);
+    color: var(--color1);
+}
+nav > .social-buttons > button > svg > path,
+nav > .social-buttons > a > svg > path{
+    transition: 0.2s;
+}
+nav > .social-buttons > a.linkedin:hover > svg > path{
+    fill: var(--color1);
+}
+nav > .social-buttons > button.email:hover{
+    background-color: transparent;
+    border: solid 4px var(--color3);
+    color: var(--color2);
+}
+.menu > h2{
+    background: var(--color2-gradient);
+    opacity: 0.8;
+    cursor: default;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+@media (max-width: 750px){
+    header{
+        height: 65px;
+        padding: 0 25px;
+    }
+    header.scrolled{
+        height: 50px;
+    }
+    header > .right > button{
+        padding: 0 15px;
+    }
+    .nav-open > .menu nav{
+        gap: 15px;
+    }
+    .nav-open > .menu{
+        width: 70vw;
+    }
+    .nav-open > .blur{
+        width: 30vw;
+    }
+    nav > .card{
+        width: 90%;
+    }
+    nav > .break{
+        width: 90%;
+    }
+    nav > .social-buttons{
+        flex-wrap: wrap;
+        width: 90%;
+        gap: 10px;
+    }
+    nav > .social-buttons > button,
+    nav > .social-buttons > a.linkedin{
+        min-width: 165px;
+        justify-content: space-between;
+        padding: 2.5px 25px;
+    }
+}

@@ -1,0 +1,195 @@
+.about > .hero h1{
+    margin-bottom: 50px;
+}
+.about > .hero .content{
+    display: flex;
+    gap: 50px;
+    margin-bottom: 50px;
+    align-items: center;
+}
+.about > .hero .content > .headshot{
+    aspect-ratio: 1;
+    width: 300px;
+    background-color: var(--color3);
+    flex-shrink: 0;
+    max-width: 60vw;
+}
+.about > .hero .content > .container{
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 25px;
+    justify-content: space-between;
+}
+.about > .hero .content > .container > span{
+    font-weight: 500;
+    font-size: 1.5em;
+    line-height: 120%;
+    letter-spacing: -0.05em;
+    color: var(--color1);
+}
+.about > .hero .content > .container > .cta-buttons{
+    display: flex;
+    justify-self: end;
+    gap: 50px;
+    margin: 5px 25px;
+    padding: 5px;
+}
+.about > .hero .content > .container > .cta-buttons > button{
+    height: 50px;
+}
+.about > .hero .content > .container > .cta-buttons > button.resume{
+    background-color: var(--color1);
+}
+.about > .hero .content > .container > .cta-buttons > button:hover,
+.about > .hero .content > .container > .cta-buttons > a:hover{
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+.about > .body{
+    min-height: 800px;
+    padding-top: 25px;
+    padding-left: 0;
+}
+.about > .body > .container > .head{
+    padding-left: 75px;
+}
+.about > .body .body-content{
+    padding-left: 75px;
+}
+.about > .body .head > .break{
+    height: 5px;
+    min-width: 900px;
+    width: 75%;
+    background-color: var(--color2);
+    position: absolute;
+    left: -75px;
+}
+.about > .body .head > nav{
+    display: flex;
+    gap: 50px;
+    margin-bottom: 15px;
+}
+.about > .body .head > nav > span{
+    font-weight: 600;
+    font-size: 1.5em;
+    line-height: 120%;
+    letter-spacing: -0.05em;
+    color: var(--color2);
+    height: 50px;
+    align-content: center;
+    padding: 0 50px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    border: solid 3px transparent;
+}
+.about > .body .head > nav > span:hover{
+    border: solid 3px var(--color2);
+}
+.about > .body .head > nav > span.selected{
+    background-color: var(--color2);
+    color: var(--color1);
+}
+.about > .body .body-content > .skills > h3{
+    font-weight: 800;
+    font-size: 1.5em;
+    letter-spacing: -0.05em;
+    margin: 25px 0;
+    margin-top: 50px;
+}
+.about > .body .body-content > .skills > .skill-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-left: 25px;
+    width: 85%;
+}
+.about > .body .body-content > .skills > .skill-cards > .card{
+    width: fit-content;
+    height: 35px;
+    cursor: default;
+    gap: 15px;
+}
+.about > .body .body-content > .skills > .skill-cards > .card:hover{
+    background: var(--color2);
+}
+.about > .body .body-content > .skills > .skill-cards > .card > img{
+    aspect-ratio: 1;
+    height: 25px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 900px){
+    .about > .hero .content{
+        flex-direction: column;
+    }
+    .about > .hero .content > .container > span{
+        text-align: center;
+    }
+    .about > .hero .content > .container > .cta-buttons{
+        align-self: center;
+        gap: 4vw;
+    }
+    .about > .body{
+        padding: 15px;
+    }
+    .about > .body .head > .break{
+        min-width: 0;
+        width: 100%;
+        left: 0;
+    }
+    .about > .body .head > nav{
+        display: flex;
+        gap: 15px;
+        margin-bottom: 15px;
+        justify-content: space-around;
+    }
+    .about > .body .head > nav > span{
+        font-size: 1em;
+        height: 35px;
+        padding: 0 15px;
+    }
+    .about > .body .body-content > .skills > h3{
+        font-size: 1.25em;
+        margin: 15px 0;
+        margin-top: 25px;
+    }
+    .about > .body .body-content > .skills > .skill-cards{
+        gap: 10px;
+        margin-left: 15px;
+        width: 90%;
+    }
+    .about > .body{
+        padding-left: 0px;
+    }
+    .about > .body > .container > .head{
+        padding-left: 25px;
+    }
+    .about > .body .body-content{
+        padding-left: 25px;
+    }
+
+}
+@media (max-width: 750px){
+    .about > .hero .content > .container > span{
+        font-size: 1.25em;
+        padding: 0 25px;
+    }
+    .about > .hero .content{
+        margin-bottom: 15px;
+    }
+}
+@media (max-width: 400px){
+    .about > .hero .content > .container > .cta-buttons{
+        flex-direction: column;
+        gap: 15px;
+        margin: 5px;
+    }
+    .about > .hero .content > .container > .cta-buttons > button,
+    .about > .hero .content > .container > .cta-buttons > .link{
+        height: 35px;
+        width: 60vw;
+        justify-content: center;
+    }
+}

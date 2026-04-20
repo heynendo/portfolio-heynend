@@ -1,0 +1,138 @@
+.service-list {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+}
+.service-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    gap: 50px;
+    width: 100%;
+}
+
+/* ---- Selected card ---- */
+
+.selected-card {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 700px;
+    height: 100%;
+    background: var(--color2-gradient);
+    box-sizing: border-box;
+    flex-shrink: 0;
+    
+    overflow: hidden;
+}
+.selected-card > .container{
+    margin: 10px 15px;
+    max-width: 80vw;
+}
+.selected-card .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: 25px;
+    gap: 10px;
+}
+
+.selected-card .head svg {
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.selected-card .head svg:hover{
+    size: 50px;
+}
+
+.selected-card .head h3 {
+    color: var(--color1);
+    font-size: 1.75em;
+    line-height: 120%;
+}
+
+.selected-card p {
+    color: var(--color1);
+    padding: 0 5px;
+    font-size: 1.1em;
+}
+
+/* ---- Options grid ---- */
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px 25px;
+    transform: translateX(0);
+    /*transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);*/
+    transition: 0.75s;
+}
+
+.options.pushed {
+    transform: translateX(725px);
+    justify-content: start;
+}
+
+/* ---- Option card ---- */
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    width: calc(50% - 100px);
+    box-sizing: border-box;
+}
+.home > .body .services > .service-list > .options > .card > h3{
+    font-size: 0.8em;
+    line-height: 90%;
+    transition: 0.2s;
+    overflow: visible;
+}
+.home > .body .services > .service-list > .options > .card:hover > h3{
+    margin-left: 10px;
+}
+.service-list > .options > .card:nth-child(3)  { margin-left: 25px; }
+.service-list > .options > .card:nth-child(5)  { margin-left: 50px; }
+.service-list > .options > .card:nth-child(7)  { margin-left: 75px; }
+
+@media (max-width: 1000px){
+    .options{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .card{
+        width: 60vw;
+    }
+    .service-list > .options > .card:nth-child(odd){
+        margin-left: 10px;
+    }
+    .selected-card {
+        width: 92.5%;
+        height: 100%;
+        margin-left: 2.5vw;
+    }
+}
+@media (max-width: 750px){
+    .card{
+        width: 85vw;
+    }
+    .card > svg{
+        width: 15px;
+    }
+    .home > .body .services > .service-list > .options > .card > h3{
+        font-size: 0.9em;
+    }
+    .selected-card .head h3{
+        font-size: 1.25em;
+    }
+    .selected-card p{
+        padding-top: 5px;
+        font-size: 1em;
+    }
+}

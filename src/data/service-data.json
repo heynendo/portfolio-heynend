@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Design & Development",
+    "desc": "End-to-end design and development, built around your goals. Everything from initial concept and visual design through to a fully deployed, production-ready site — clean code, deliberate design decisions, and full involvement at every stage until the work is done right."
+  },
+  {
+    "id": 2,
+    "title": "Web Updates & Maintenance",
+    "desc": "Launching your site is just the beginning. As your business evolves, your website should too — I provide ongoing support for updates, performance improvements, and anything else that comes up, so your site always reflects where your business is today."
+  },
+  {
+    "id": 3,
+    "title": "Email Services",
+    "desc": "Email is one of the most direct ways to reach your audience, and it deserves the same attention as the rest of your website. Whether you need a professional address, a branded template, or just a reliable setup, I make sure your email presence is something you can stand behind."
+  },
+  {
+    "id": 4,
+    "title": "SEO (Search Engine Optimization)",
+    "desc": "A great website means nothing if the right people can't find it. I take a straightforward, results-focused approach to SEO — reviewing what's working, identifying what isn't, and making meaningful improvements that help your business show up when and where it matters most."
+  },
+  {
+    "id": 5,
+    "title": "Hosting & Infrastructure",
+    "desc": "The behind-the-scenes work is just as important as what your visitors see. I set up and configure fast, dependable hosting environments tailored to your site — so it stays online, loads quickly, and is built on a foundation that won't let you down as your business grows."
+  },
+  {
+    "id": 6,
+    "title": "More",
+    "desc": "Every business is different, and not every need fits neatly into a category. If you have something in mind that isn't listed here, reach out anyway — I'm always open to a new challenge and happy to talk through how I can help."
+  }
+]
