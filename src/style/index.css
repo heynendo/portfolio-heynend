@@ -22,7 +22,7 @@ main {
     min-height: 100vh;
 }
 h1{
-  min-height: 100px;
+  min-height: 50px;
   font-weight: 700;
   font-size: 6em;
   line-height: 0.9em;
@@ -40,7 +40,6 @@ h1.bold{
 }
 h1.bold > span{
   display: block;
-  min-height: 100px;
   font-weight: 700;
   font-size: 0.95em;
   line-height: 1.05em;

@@ -8,11 +8,18 @@
     align-items: center;
 }
 .about > .hero .content > .headshot{
-    aspect-ratio: 1;
+    aspect-ratio: 3411/3049;
     width: 300px;
     background-color: var(--color3);
     flex-shrink: 0;
     max-width: 60vw;
+    overflow: hidden;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.25);
+    margin: 10px;
+}
+.about > .hero .content > .headshot > img{
+    width: 100%;
+    padding: 0;
 }
 .about > .hero .content > .container{
     text-align: end;
