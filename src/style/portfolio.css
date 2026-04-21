@@ -1,7 +1,6 @@
 .portfolio > .hero .cta > span{
     display: block;
-    margin: 75px;
-    margin-bottom: 50px;
+    margin: 25px auto;
     justify-self: start;
     max-width: 1200px;
 }
@@ -116,5 +115,14 @@
     }
     .portfolio > .body .project-selector .card{
         width: 100%;
+    }
+}
+@media (max-width: 750px){
+    .portfolio > .hero .cta{
+        margin: 25px auto;
+        margin-bottom: 0;
+    }
+    .portfolio > .hero{
+        min-height: 250px;
     }
 }

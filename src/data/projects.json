@@ -1,28 +1,28 @@
 [
     {
         "name": "Well Life Nursing Care",
-        "date": "",
+        "date": "2026-04-01",
         "type": "client",
-        "desc": "A full-stack appointment scheduling application with role-based authentication, availability management, and real-time appointment booking.",
+        "desc": "Designed and developed for an independent nursing care provider launching their business. Built from the ground up to establish their online presence, communicate their services, and convert first-time visitors into clients.",
         "link": "https://www.welllifenursingcare.com/",
         "github": "https://github.com/heynendo/WellLifeNursingCare",
         "photos": ["/photos/WellLifeNursingCare-1.PNG","/photos/WellLifeNursingCare-2.PNG","/photos/WellLifeNursingCare-3.PNG"],
-        "mobilePhotos": ["/photos/WellLifeNursingCare-Mobile1.png", "/photos/WellLifeNursingCare-Mobile2.png", "/photos/WellLifeNursingCare-Mobile3.png"]
+        "mobilePhotos": ["/photos/WellLifeNursingCare-Mobile1.png", "/photos/WellLifeNursingCare-Mobile2.png", "/photos/WellLifeNursingCare-Mobile3.png"] 
     },
     {
         "name": "Icons by Heynendo",
-        "date": "",
+        "date": "2026-02-01",
         "type": "personal",
-        "desc": "A React-first icon library designed to give developers beautiful, customizable icons. This library can be installed through npm or icons can be copied and downloaded from the website.",
+        "desc": "A React-first icon library built to give developers a clean, flexible set of customizable icons. Installable via npm and available to copy or download directly from the site.",
         "link": "https://iconsbyheynendo.pages.dev/",
         "github": "https://github.com/heynendo/IconsByHeynendo",
         "photos": ["/photos/IconsByHeynendo-1.PNG","/photos/IconsByHeynendo-2.PNG","/photos/IconsByHeynendo-3.PNG"]
     },
     {
         "name": "Schedule System",
-        "date": "",
+        "date": "2026-01-01",
         "type": "personal",
-        "desc": "A full-stack appointment scheduling application with role-based authentication, availability management, and real-time appointment booking.",
+        "desc": "A full-stack MERN application built to demonstrate end-to-end scheduling capabilities, featuring role-based authentication, separate client and admin experiences, and real-time appointment booking logic handling availability, conflicts, and status tracking.",
         "link": "https://scheduling-tool-21o.pages.dev/",
         "github": "https://github.com/heynendo/scheduling-tool",
         "photos": ["/photos/ScheduleSystem-1.PNG","/photos/ScheduleSystem-2.PNG","/photos/ScheduleSystem-3.PNG"],
@@ -30,9 +30,9 @@
     },
     {
         "name": "XCL Property Management",
-        "date": "",
+        "date": "2025-10-01",
         "type": "client",
-        "desc": "Website for XCL Management showcasing their office properties across Orland Park, IL, with easy navigation for current and future tenants to explore locations and connect.",
+        "desc": "A client project for a property management company operating across Orland Park, IL. The site showcases their available office properties with a clean, navigable layout built for both current and prospective tenants — making it straightforward to explore locations, review details, and get in touch with the team.",
         "link": "https://www.xclmgt.com/",
         "github": "https://github.com/heynendo/XclPropertyManagement",
         "photos": ["/photos/XclPropertyManagement-1.PNG","/photos/XclPropertyManagement-2.PNG","/photos/XclPropertyManagement-3.PNG"],
@@ -40,9 +40,9 @@
     },
     {
         "name": "Rebie's Bakery",
-        "date": "",
+        "date": "2025-06-01",
         "type": "client",
-        "desc": "Custom website for independent business Rebie's Bakery to display their creations, share the menu options, and connect with customers.",
+        "desc": "A custom site for a home-based custom bakery, giving the business a professional online presence to showcase their work and attract new customers. Features a full photo gallery of custom creations, a browsable menu, and a contact section for placing inquiries — turning a word-of-mouth business into one that's discoverable online.",
         "link": "https://www.rebies-bakery.com/",
         "github": "https://github.com/heynendo/rebies-bakery",
         "photos": ["/photos/RebiesBakery-1.PNG","/photos/RebiesBakery-2.PNG","/photos/RebiesBakery-3.PNG"],
@@ -50,18 +50,18 @@
     },
     {
         "name": "Git Repo Tracker",
-        "date": "",
+        "date": "2025-09-01",
         "type": "personal",
-        "desc": "A React website built for developers that takes a public git URL and visualizes all commits, branches, and details from the repo. Allows users to download commit details in their preferred data format.",
+        "desc": "A developer tool built around the GitHub API, designed to make repository activity more readable at a glance. Input any public repository URL to visualize commits, branches, and key details in a clean, organized layout — with the option to export commit data in your preferred format.",
         "link": "https://git-repo-tracker.pages.dev/",
         "github": "https://github.com/heynendo/git-repo-tracker",
         "photos": ["/photos/GitRepoTracker-1.PNG","/photos/GitRepoTracker-2.PNG","/photos/GitRepoTracker-3.PNG"]
     },
     {
         "name": "HF Photography",
-        "date": "",
+        "date": "2025-08-01",
         "type": "client",
-        "desc": "Portfolio site for freelance photographer Helayna Fuller to showcase her work and connect with prospective clients.",
+        "desc": "Designed and developed for a local freelance photographer looking to establish a professional online presence. The site showcases her portfolio, introduces her background and style, and makes it easy for prospective clients to get in touch",
         "link": "https://www.helaynafullerphotography.com/",
         "github": "https://github.com/heynendo/helayna-fuller-photography",
         "photos": ["/photos/HFPhotos-1.PNG","/photos/HFPhotos-2.PNG","/photos/HFPhotos-3.PNG"],

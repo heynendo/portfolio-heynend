@@ -10,6 +10,7 @@ import Skills from "../components/about/Skills"
 import Experience from "../components/about/Experience"
 import { AnimatePresence, motion } from 'motion/react'
 import ResumeOptions from "../components/about/ResumeOptions"
+import headshot from '/Headshot.jpg'
 
 export default function About(){
 
@@ -21,7 +22,9 @@ export default function About(){
             <HeroSection>
                 <h1 className="bold">About Me.</h1>
                 <div className="content">
-                    <div className="headshot"></div>
+                    <div className="headshot">
+                        <img src={headshot}/>
+                    </div>
                     <div className="container">
                         <span>I'm a web developer and software engineer with a passion for building things that work as good as they look. Based outside of Chicago, I work with businesses and teams who need clean, reliable web applications built with care. I bring a strong technical foundation, an eye for design, and the ability to take a project from concept to launch.</span>
                         <span>Below you'll find my skills, experience, and education — if my background is a fit for what you're looking for, don't hesitate to reach out.</span>
