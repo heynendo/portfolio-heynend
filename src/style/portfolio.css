@@ -1,8 +1,11 @@
 .portfolio > .hero .cta > span{
     display: block;
     margin: 25px auto;
+    margin-top: 50px;
     justify-self: start;
     max-width: 1200px;
+    line-height: 100%;
+    overflow: visible;
 }
 .portfolio > .body{
     padding: 0;
@@ -92,6 +95,9 @@
     opacity: 1;
 }
 @media (max-width: 850px){
+    .portfolio > .hero .cta > span{
+        margin: 25px auto;
+    }
     .portfolio > .body .project-selector{
         width: 100%;
     }
