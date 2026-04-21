@@ -37,3 +37,8 @@
 .close:hover{
     font-size: 1.35em;
 }
+.not-found p{
+    color: var(--color1);
+    margin: 50px 0;
+    font-size: 1.2em;
+}
