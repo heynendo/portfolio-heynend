@@ -5,7 +5,6 @@ import BodySection from '../components/BodySection'
 import LowerSection from '../components/LowerSection'
 import DHLogo from '../icons/DHLogo'
 import { useNavigate } from 'react-router-dom'
-import ScrollToTop from '../functions/ScrollToTop'
 
 export default function Home(){
 
@@ -25,7 +24,7 @@ export default function Home(){
                     <DHLogo className="logo" />
                     <div className='break'/>
                     <p className='bold'>
-                        I build dependable, production-ready web applications from the ground up, working with clients through every stage of the process — from initial design to final deployment — making sure nothing gets lost along the way. I care about the details: clean code, thoughtful UI, and sites that hold up over time.
+                        I design and build websites that are clean, fast, and built to last. I work closely with every client from the first conversation to launch day, making sure the final product is something they're proud to put their name on. Looking to launch something new, improve what you have, or bring someone onto your team? Reach out and let's get started.
                     </p>
                 </div>
                 <div className='services'>

@@ -32,9 +32,10 @@
 .about > .hero .content > .container > span{
     font-weight: 500;
     font-size: 1.5em;
-    line-height: 120%;
+    line-height: 100%;
     letter-spacing: -0.05em;
     color: var(--color1);
+    overflow: visible;
 }
 .about > .hero .content > .container > .cta-buttons{
     display: flex;
