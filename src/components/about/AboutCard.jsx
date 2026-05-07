@@ -22,11 +22,11 @@ export default function AboutCard({
                     {date && <span className="date">{date}</span>}
                 </div>
                 {width > 750 &&<div className="info">
-                    {content.map(x => <p className='sm-light'>{x}</p>)}
+                    {content.map((x, index) => <p key={index} className='sm-light'>{x}</p>)}
                 </div>}
             </div>
             {width < 750 &&<div className="info">
-                {content.map(x => <p className='sm-light'>{x}</p>)}
+                {content.map((x, index) => <p key={index} className='sm-light'>{x}</p>)}
             </div>}
         </div>
     )

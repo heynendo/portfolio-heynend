@@ -35,7 +35,7 @@ export default function ProjectSelector({
             return 0
         })
         .map(proj => (
-            <div className={`card ${selectedProject.name === proj.name ? 'selected' : ''}`} onClick={() => {
+            <div key={proj.name} className={`card ${selectedProject.name === proj.name ? 'selected' : ''}`} onClick={() => {
                 setSelectedProject(proj)
                 if (width <= 850){
                     setProjectNav(false)

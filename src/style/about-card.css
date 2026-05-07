@@ -88,8 +88,11 @@
     }
     .about-card > .container > .head > .date{
         margin-top: 5px;
-        margin-left: 15px;
-    }.about-card > .info > p{
+        margin-left: 5px;
+        height: auto;
+        min-height: 25px;
+    }
+    .about-card > .info > p{
         margin: 10px;
     }
 }

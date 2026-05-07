@@ -200,4 +200,13 @@
         width: 60vw;
         justify-content: center;
     }
+    .about > .body > .container > .head{
+        padding-left: 15px;
+    }
+    .about > .body .head > nav{
+        gap: 10px;
+    }
+    .about > .body .head > nav > span{
+        font-size: 0.9em;
+    }
 }
