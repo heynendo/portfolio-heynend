@@ -5,6 +5,7 @@ import GithubIcon from "../../icons/GithubIcon"
 import { AnimatePresence, motion } from "motion/react"
 import { getWindowWidth } from '../../functions/GetWindowWidth'
 import { HamburgerMenu1 } from "icons-by-heynendo"
+import ImageLoading from "../ImageLoading"
 
 export default function ProjectInfo({ selectedProject, setProjectNav  }) {
 
@@ -44,18 +45,20 @@ export default function ProjectInfo({ selectedProject, setProjectNav  }) {
 
                     <div className={`slideshow ${viewMode}`}>
                         <div className='main-img'>
-                            <img
-                                src={selectedPhoto}
+                            <ImageLoading 
+                                key={selectedPhoto}
+                                img={selectedPhoto} 
+                                className="main-photo" 
+                                priority 
                             />
                         </div>
                         <div className="image-selector">
                             {selectedProject.photos.map(photo => (
                                 <div className="option" key={photo}>
-                                    <img
-                                        src={photo}
-                                        onClick={() => {
-                                            setSelectedPhoto(photo)
-                                        }}
+                                    <ImageLoading 
+                                        img={photo} 
+                                        className="thumb" 
+                                        onClick={() => setSelectedPhoto(photo)} 
                                     />
                                 </div>
                                 ))

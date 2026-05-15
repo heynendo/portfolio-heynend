@@ -61,12 +61,15 @@
     flex-shrink: 1;
     padding: 0 0 15px 15px;
 }
-.project-info > .main > .slideshow > .main-img > img{
+.project-info > .main > .slideshow > .main-img > .img-wrap {
     display: block;
     width: 100%;
     height: auto;
     aspect-ratio: 15/9;
     box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+.project-info > .main > .slideshow > .main-img img {
+    transition: opacity 0.3s ease-in-out;
 }
 .project-info > .main > .slideshow > .image-selector{
     display: flex;
@@ -88,7 +91,7 @@
 .project-info > .main > .slideshow > .image-selector > .option:hover{
     opacity: 1;
 }
-.project-info > .main > .slideshow > .image-selector > .option > img{
+.project-info > .main > .slideshow > .image-selector > .option > .img-wrap {
     width: 100%;
     height: 100%;
 }
